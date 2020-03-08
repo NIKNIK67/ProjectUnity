@@ -66,6 +66,7 @@
     <Compile Include="Assets\C#Scripts\First.cs" />
     <Compile Include="Assets\C#Scripts\GorilaScript.cs" />
     <Compile Include="Assets\C#Scripts\HitBoxScreept.cs" />
+    <Compile Include="Assets\C#Scripts\Sword.cs" />
     <Compile Include="Assets\C#Scripts\ccamera.cs" />
     <Compile Include="Assets\C#Scripts\teleport.cs" />
     <Reference Include="Unity.Timeline.Editor">
