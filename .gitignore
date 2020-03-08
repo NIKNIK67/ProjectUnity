@@ -1,0 +1,6 @@
+.vs/
+Library/
+Logs/
+Temp/
+Library/*.dll
+Library/ShaderCache/

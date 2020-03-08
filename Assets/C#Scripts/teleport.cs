@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class teleport : MonoBehaviour
-{ 
+{
+    public int level;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class teleport : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            
+            SceneManager.LoadScene(level);
         }
     }
 }

@@ -1039,9 +1039,9 @@ GameObject:
   - component: {fileID: 672449770}
   - component: {fileID: 672449769}
   - component: {fileID: 672449768}
-  - component: {fileID: 672449767}
   - component: {fileID: 672449766}
-  m_Layer: 8
+  - component: {fileID: 672449767}
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,19 +1060,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16fa5cf44c0cca46a22bbe92b8b99d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &672449767
-BoxCollider:
+  level: 1
+--- !u!61 &672449767
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672449765}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!23 &672449768
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1147,6 +1161,7 @@ GameObject:
   - component: {fileID: 701092718}
   - component: {fileID: 701092719}
   - component: {fileID: 701092720}
+  - component: {fileID: 701092721}
   m_Layer: 0
   m_Name: GorillaWithGungo0
   m_TagString: Enemy
@@ -1293,6 +1308,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97a7a38adc72e584086207ac03bdf418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &701092721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701092714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17224d89e24f7934da0bdbf335497f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   i: 0
@@ -2108,8 +2135,8 @@ GameObject:
   - component: {fileID: 1267866821}
   - component: {fileID: 1267866820}
   - component: {fileID: 1267866819}
-  - component: {fileID: 1267866822}
   - component: {fileID: 1267866823}
+  - component: {fileID: 1267866822}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2152,7 +2179,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 19.404974
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2191,7 +2218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1267866818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d864ee293cbca34b98a68d234d09003, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e61f72a626e26f4d830e7a85cd45fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   max_x: 0
@@ -3058,7 +3085,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17877197, y: -0.66111374}
+  m_Offset: {x: 0.17877197, y: -1.0098591}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3069,7 +3096,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.494911, y: 10.747566}
+  m_Size: {x: 5.494911, y: 11.445057}
   m_EdgeRadius: 0
 --- !u!50 &2078712503
 Rigidbody2D:
@@ -3101,7 +3128,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2078712498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0578a73da603a4e8057cd094016b1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4de74a42db5b2aa498639b4c168fb894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2083917240
