@@ -8,9 +8,11 @@ public class First : MonoBehaviour
     int a = 1;
     int b = 1;
     Rigidbody2D rb;
+    Animator anim;
     void Start()
     {
     	rb = GetComponent<Rigidbody2D> ();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,7 +21,7 @@ public class First : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject HitBOX = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            HitBOX.transform.localScale = new Vector2(10, 2);
+            HitBOX.transform.localScale = new Vector3(10, 2, -100);
             BoxCollider e = HitBOX.GetComponent<BoxCollider>();
             Destroy(e);
             HitBOX.AddComponent<BoxCollider2D>();
@@ -40,8 +42,14 @@ public class First : MonoBehaviour
             }
             
             
-            
-
+        }
+        if (rb.velocity.magnitude!=0)
+        {
+            anim.SetInteger("test", 1);
+        }
+        else
+        {
+            anim.SetInteger("test", 2);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
