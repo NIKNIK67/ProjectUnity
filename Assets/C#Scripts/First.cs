@@ -52,15 +52,16 @@ public class First : MonoBehaviour
             transform.eulerAngles=new Vector3(0, 180.0f, 0);
 
         }
-        if (Input.GetKeyDown(KeyCode.Space)&&(a==1)){
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             rb.AddForce(transform.up * 50f, ForceMode2D.Impulse);
-            a=0;
-            
+           
+
         }
         if (Input.GetKeyDown(KeyCode.E)&&(a==1)){
             rb.AddForce(transform.up * 24f, ForceMode2D.Impulse);
             rb.AddForce(transform.right * 24f, ForceMode2D.Impulse);
-            a=0;
+            a = 0;
             b=0;
         }
     }
