@@ -4,3 +4,4 @@ Logs/
 Temp/
 Library/*.dll
 Library/ShaderCache/
+Library/PackageCache/
