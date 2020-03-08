@@ -71,7 +71,18 @@ public class First : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
+        
         a = 1;
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Lader")
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.velocity = new Vector2(rb.transform.position.x, 20f);
+            }
+        }
     }
     //void FixUpdate(){
     //	rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 12f, rb.velocity.y);
