@@ -20,7 +20,7 @@ public class GorilaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((transform.position.x < max_x && transform.position.x>min_x)&&(Player.transform.position.x<max_x || Player.transform.position.y<min_x))
+        if ((transform.position.x < max_x-1 && transform.position.x>min_x+1)&&(Player.transform.position.x<max_x && Player.transform.position.y<min_x))
         {
             if (Player.transform.position.x > transform.position.x)
             {
@@ -33,12 +33,14 @@ public class GorilaScript : MonoBehaviour
                 rb.velocity = new Vector2(-15f, rb.velocity.y);
             }
         }
-        if (transform.position.x > max_x)
+
+       
+        if (transform.position.x > max_x+1)
         {
             transform.eulerAngles = new Vector3(0, 180f, 0);
             rb.velocity = new Vector2(-15f, rb.velocity.y);
         }
-        if (transform.position.x < min_x)
+        if (transform.position.x < min_x-1)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rb.velocity = new Vector2(15f, rb.velocity.y);
