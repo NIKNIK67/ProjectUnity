@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class First : MonoBehaviour
 {
@@ -9,15 +10,23 @@ public class First : MonoBehaviour
     int b = 1;
     Rigidbody2D rb;
     Animator anim;
+    public int hp;
+    public float slash;
     void Start()
     {
     	rb = GetComponent<Rigidbody2D> ();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        slash += Time.deltaTime;
+        GameObject Hp_lable = GameObject.Find("HP_canvas");
+        Hp_lable.transform.position = new Vector3(transform.position.x+8, transform.position.y+10, 2);
+        GameObject Hp = GameObject.Find("HP_label");
+        Hp.GetComponent<Text>().text = Convert.ToString(hp);
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject HitBOX = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -51,31 +60,69 @@ public class First : MonoBehaviour
         {
             anim.SetInteger("test", 2);
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
+            if (rb.velocity.x<20)
+            {
+                rb.velocity = new Vector2(20f, rb.velocity.y);
+
+            }
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.eulerAngles=new Vector3(0, 180.0f, 0);
+            if (rb.velocity.x > -20)
+            {
+                rb.velocity = new Vector2(-20f, rb.velocity.y);
+            }
+                transform.eulerAngles=new Vector3(0, 180.0f, 0);
 
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&&a==1)
         {
-            rb.AddForce(transform.up * 50f, ForceMode2D.Impulse);
+            Vector2 op = new Vector2(rb.velocity.x, 50);
+
+            rb.velocity = op; 
+            a = 0;
            
 
         }
-        if (Input.GetKeyDown(KeyCode.E)&&(a==1)){
-            rb.AddForce(transform.up * 24f, ForceMode2D.Impulse);
-            rb.AddForce(transform.right * 24f, ForceMode2D.Impulse);
-            a = 0;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (slash > 2)
+            {
+                if (transform.eulerAngles.y == 180f)
+                {
+                    Vector2 n = new Vector2(-70f, rb.velocity.y+25);
+                    rb.AddForce(n, ForceMode2D.Impulse);
+                    a = 0;
+
+                }
+                if (transform.eulerAngles.y == 0f)
+                {
+                    Vector2 n = new Vector2(70f, rb.velocity.y+25);
+                    rb.AddForce(n, ForceMode2D.Impulse);
+                    a = 0;
+                }
+                slash = 0;
+            }
+          
             b=0;
         }
+        if (rb.velocity.x > 100)
+        {
+            rb.velocity =new Vector2(100,rb.velocity.y);
+
+        }
+        if (rb.velocity.x < -100)
+        {
+            rb.velocity = new Vector2(-100, rb.velocity.y);
+        }
+       
     }
 
     void FixedUpdate(){
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 20f, rb.velocity.y);
+        //rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 20f, rb.velocity.y);
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -88,11 +135,10 @@ public class First : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                rb.velocity = new Vector2(rb.transform.position.x, 20f);
+                rb.velocity = new Vector2(0, 20f);
             }
         }
     }
-    //void FixUpdate(){
-    //	rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 12f, rb.velocity.y);
-    //}
+
+
 }
