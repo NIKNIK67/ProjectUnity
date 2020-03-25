@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class First : MonoBehaviour
 {
+    
     int a = 1;
     int b = 1;
     Rigidbody2D rb;
     Animator anim;
     public int hp;
     public float slash;
+    public int coin;
     void Start()
     {
     	rb = GetComponent<Rigidbody2D> ();
@@ -22,10 +24,16 @@ public class First : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
         slash += Time.deltaTime;
         GameObject Hp_lable = GameObject.Find("HP_canvas");
-        Hp_lable.transform.position = new Vector3(transform.position.x+8, transform.position.y+10, 2);
+        Hp_lable.transform.position = new Vector2(transform.position.x + 8, transform.position.y + 10);
         GameObject Hp = GameObject.Find("HP_label");
+        GameObject Coin = GameObject.Find("Coin");
+        Coin.GetComponent<Text>().text = Convert.ToString(coin);
         Hp.GetComponent<Text>().text = Convert.ToString(hp);
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -35,13 +43,14 @@ public class First : MonoBehaviour
             Destroy(e);
             HitBOX.AddComponent<BoxCollider2D>();
             HitBOX.AddComponent<HitBoxScrept>();
-            
-            BoxCollider2D box = HitBOX.GetComponent < BoxCollider2D>();
-            
-            if (transform.eulerAngles.y==0)
+
+
+            BoxCollider2D box = HitBOX.GetComponent<BoxCollider2D>();
+
+            if (transform.eulerAngles.y == 0)
             {
-                HitBOX.transform.position = new Vector3(transform.position.x+5, transform.position.y, transform.position.z);
-                
+                HitBOX.transform.position = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z);
+
 
             }
             if (transform.eulerAngles.y == 180)
@@ -49,8 +58,12 @@ public class First : MonoBehaviour
                 HitBOX.transform.position = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
 
             }
-            
-            
+
+
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            print("12312");
         }
         if (rb.velocity.magnitude!=0)
         {
@@ -89,7 +102,7 @@ public class First : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (slash > 2)
+            if (slash > 1 && a == 1)
             {
                 if (transform.eulerAngles.y == 180f)
                 {
@@ -128,6 +141,16 @@ public class First : MonoBehaviour
     {
         
         a = 1;
+        
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "coin")
+        {
+            coin += 1;
+            Destroy(collision.gameObject);
+            print(111);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -137,6 +160,10 @@ public class First : MonoBehaviour
             {
                 rb.velocity = new Vector2(0, 20f);
             }
+        }
+        if (collision.gameObject.tag == "coin")
+        { 
+        
         }
     }
 

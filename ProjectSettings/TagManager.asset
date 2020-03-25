@@ -8,6 +8,7 @@ TagManager:
   - Lader
   - Arena
   - HP
+  - coin
   layers:
   - Default
   - TransparentFX

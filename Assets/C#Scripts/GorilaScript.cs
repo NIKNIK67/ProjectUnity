@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GorilaScript : MonoBehaviour
 {
+    public int hp;
     public int i;
     Rigidbody2D rb;
     public int max_x;

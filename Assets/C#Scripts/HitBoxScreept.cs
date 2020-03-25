@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class HitBoxScrept : MonoBehaviour
 {
+    
     int i = 0;
     // Start is called before the first frame update
     void Start()
     {
+        
         gameObject.AddComponent<BoxCollider2D>();
     }
 
@@ -19,25 +21,45 @@ public class HitBoxScrept : MonoBehaviour
             i++;
             BoxCollider2D x = gameObject.AddComponent<BoxCollider2D>();
             x.isTrigger = true;
-            Invoke("my_Destroy", 0.1f);
+            Invoke("my_Destroy", 0.2f);
 
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
+  public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
+            
         {
-            Destroy(collision.gameObject);
-            print("Hitted");
+            if (collision.GetComponent<GorilaScript>().hp <= 0)
+            {
+                GameObject coin = GameObject.CreatePrimitive(PrimitiveType.Cube);
+               
+                BoxCollider e = coin.GetComponent<BoxCollider>();
+
+                Destroy(e);
+
+                coin.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y, 1);
+
+                Destroy(collision.gameObject);
+                coin.AddComponent<BoxCollider2D>();
+                coin.AddComponent<Rigidbody2D>();
+                coin.AddComponent<CoinScript>();
+                BoxCollider2D box_coin = coin.GetComponent<BoxCollider2D>();
 
 
+                print("Hitted");
+
+            }
+            else
+            {
+                collision.GetComponent<GorilaScript>().hp -= 1;
+            }
         }
     }
-    void my_Destroy()
 
+    void my_Destroy()
     {
         Destroy(gameObject);
     }
-
 }
 
