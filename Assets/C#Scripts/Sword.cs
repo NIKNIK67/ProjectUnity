@@ -15,7 +15,7 @@ public class Sword : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            anim.SetInteger("A", 1);
+            anim.SetInteger("A", Random.Range(1,4));
         }
         else
         {

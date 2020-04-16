@@ -4,16 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Lader
-  - Arena
-  - HP
-  - coin
-  - Inv
-  - Stone
-  - Iron
-  - Wood
-  - Menu
+  - Bullet
+  - HPPrefab
+  - Ground
+  - Platform
+  - BulletForRaven
   layers:
   - Default
   - TransparentFX
@@ -23,13 +19,13 @@ TagManager:
   - UI
   - 
   - 
-  - player
-  - 
-  - Enemy
-  - 
-  - 
-  - 
-  - 
+  - Enemies
+  - bullets
+  - plyer
+  - PlatformForEnemies
+  - HBP
+  - FO
+  - Ground
   - 
   - 
   - 
