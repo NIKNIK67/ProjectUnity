@@ -21,7 +21,8 @@ public class HitBoxScrept : MonoBehaviour
             i++;
             BoxCollider2D x = gameObject.AddComponent<BoxCollider2D>();
             x.isTrigger = true;
-            Invoke("my_Destroy", 0.2f);
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            Invoke("my_Destroy", 0.1f);
 
         }
     }
@@ -57,7 +58,7 @@ public class HitBoxScrept : MonoBehaviour
         }
     }
 
-    void my_Destroy()
+    public void my_Destroy()
     {
         Destroy(gameObject);
     }

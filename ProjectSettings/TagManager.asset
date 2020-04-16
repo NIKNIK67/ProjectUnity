@@ -9,6 +9,11 @@ TagManager:
   - Arena
   - HP
   - coin
+  - Inv
+  - Stone
+  - Iron
+  - Wood
+  - Menu
   layers:
   - Default
   - TransparentFX

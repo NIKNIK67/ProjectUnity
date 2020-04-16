@@ -64,12 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\C#Scripts\CoinScript.cs" />
-    <Compile Include="Assets\C#Scripts\First.cs" />
     <Compile Include="Assets\C#Scripts\GorilaScript.cs" />
     <Compile Include="Assets\C#Scripts\HitBoxScreept.cs" />
-    <Compile Include="Assets\C#Scripts\Inventory.cs" />
-    <Compile Include="Assets\C#Scripts\Item.cs" />
+    <Compile Include="Assets\C#Scripts\InventoryButton.cs" />
+    <Compile Include="Assets\C#Scripts\Menu.cs" />
     <Compile Include="Assets\C#Scripts\MenuCamera.cs" />
+    <Compile Include="Assets\C#Scripts\Player.cs" />
+    <Compile Include="Assets\C#Scripts\Save.cs" />
     <Compile Include="Assets\C#Scripts\Sword.cs" />
     <Compile Include="Assets\C#Scripts\ccamera.cs" />
     <Compile Include="Assets\C#Scripts\teleport.cs" />

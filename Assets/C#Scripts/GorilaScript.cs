@@ -87,7 +87,7 @@ public class GorilaScript : MonoBehaviour
         if (Player.transform.position.x > transform.position.x - 20 && Player.transform.position.x < transform.position.x + 20)
         {
 
-            Player.GetComponent<First>().hp -= 1;
+            Player.GetComponent<Player>().hp -= 1;
             
         }
     }

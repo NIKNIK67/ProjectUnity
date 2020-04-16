@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Wtf.unity
+- path: Assets/Scenes/Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

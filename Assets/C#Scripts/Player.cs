@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class First : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    
+
+    public bool ispause=false;
     int a = 1;
     int b = 1;
     Rigidbody2D rb;
@@ -14,8 +15,13 @@ public class First : MonoBehaviour
     public int hp;
     public float slash;
     public int coin;
+    public int Wood;
+    public int Iron;
+    public int Stone;
+    public GameObject UI;
     void Start()
     {
+
     	rb = GetComponent<Rigidbody2D> ();
         anim = GetComponent<Animator>();
         
@@ -24,17 +30,31 @@ public class First : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (ispause == false)
+            {
+                Pause();
+            }
+            else
+            {
+                Resume();
+            }
+        }
         if (hp <= 0)
         {
             Destroy(gameObject);
         }
-        slash += Time.deltaTime;
-        GameObject Hp_lable = GameObject.Find("HP_canvas");
-        Hp_lable.transform.position = new Vector2(transform.position.x + 8, transform.position.y + 10);
-        GameObject Hp = GameObject.Find("HP_label");
-        GameObject Coin = GameObject.Find("Coin");
-        Coin.GetComponent<Text>().text = Convert.ToString(coin);
-        Hp.GetComponent<Text>().text = Convert.ToString(hp);
+        if (ispause==false)
+        {
+            slash += Time.deltaTime;
+            GameObject Hp_lable = GameObject.Find("HP_canvas");
+            
+            GameObject Hp = GameObject.Find("HP_label");
+            GameObject Coin = GameObject.Find("Coin");
+            Coin.GetComponent<Text>().text = Convert.ToString(coin);
+            Hp.GetComponent<Text>().text = Convert.ToString(hp);
+        }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject HitBOX = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -141,8 +161,24 @@ public class First : MonoBehaviour
     {
         
         a = 1;
-        
+        if (col.gameObject.tag == "Wood")
+        {
+            Wood += 1;
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Iron")
+        {
+            Iron += 1;
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Stone")
+        {
+            Stone += 1;
+            Destroy(col.gameObject);
+        }
+
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "coin")
@@ -151,6 +187,7 @@ public class First : MonoBehaviour
             Destroy(collision.gameObject);
             print(111);
         }
+       
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -166,6 +203,20 @@ public class First : MonoBehaviour
         
         }
     }
-
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        UI.SetActive(false);
+        ispause = true;
+        
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        UI.SetActive(true);
+        ispause = false;
+        
+        
+    }
 
 }

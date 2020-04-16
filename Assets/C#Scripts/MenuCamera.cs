@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuCamera: MonoBehaviour
 {
-    public int level;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +17,12 @@ public class MenuCamera: MonoBehaviour
     {
         
     }
-    public void newGameLoad()
+    public void newGameLoad(int level)
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(level) ;
     }
     public void Exit()
     {
-        Application.Quit(1);
+        Application.Quit(0);
     }
 }
