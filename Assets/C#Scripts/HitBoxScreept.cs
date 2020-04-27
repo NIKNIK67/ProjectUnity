@@ -32,6 +32,7 @@ public class HitBoxScrept : MonoBehaviour
 
 
         }
+        
     }
     void my_Destroy()
 

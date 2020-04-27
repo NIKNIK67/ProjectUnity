@@ -49,7 +49,8 @@ MonoBehaviour:
   Min_x: 0
   Min_y: 0
   move: 0
-  player: {fileID: 0}
+  player: {fileID: 2986610501796832155, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf, type: 3}
+  Pause: {fileID: 2593005792089843015, guid: 265a8392e0f7aa44284cbd2bcdd54746, type: 3}
 --- !u!1 &8788644451444946053
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,4 +172,5 @@ MonoBehaviour:
   t: 0
   move: 5
   hited: 0
-  player: {fileID: 0}
+  player: {fileID: 2986610501796832155, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf, type: 3}
+  menu: {fileID: 0}

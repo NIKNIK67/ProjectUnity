@@ -27,6 +27,8 @@ public class Musketear : MonoBehaviour
     SpriteRenderer sr;
     void Start()
     {
+        maxX = transform.position.x + 20;
+        minX = transform.position.x - 20;
         pl = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();

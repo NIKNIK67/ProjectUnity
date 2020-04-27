@@ -183,9 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 15
-  pl: {fileID: 0}
-  BilletPref: {fileID: 0}
-  SmokePref: {fileID: 0}
+  dead: {fileID: 4365871464311709004, guid: a7232348d5191504da17dd5c7387990f, type: 3}
+  pl: {fileID: 2986610501796832155, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf, type: 3}
   TimeOfReload: 0
   maxX: 316.3
   minX: 253.7307

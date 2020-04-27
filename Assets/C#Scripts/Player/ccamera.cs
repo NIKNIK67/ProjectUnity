@@ -9,9 +9,11 @@ public class ccamera : MonoBehaviour
     private Camera cam;
     public GameObject player;
     Animator anim;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
+        player=GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {
@@ -45,5 +47,6 @@ public class ccamera : MonoBehaviour
                 transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x, Min_y), 0.1f);
             }
        }
+ 
     }
 }

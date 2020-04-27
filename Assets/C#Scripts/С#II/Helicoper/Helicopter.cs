@@ -16,7 +16,7 @@ public class Helicopter : MonoBehaviour
     public float pe; 
     public Vector2 LefPos;
     public Vector2 RightPos;
-    Vector2 NextPos;
+    public Vector2 NextPos;
     public float height;
     float HS=0;
     public float speed;
@@ -31,11 +31,15 @@ public class Helicopter : MonoBehaviour
 
     void Start()
     {
+        LefPos = new Vector2(transform.position.x-20, transform.position.y+10);
+        RightPos = new Vector2(transform.position.x+20, transform.position.y-10);
         pl = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         MYRand();
+
+
     }
     void Update()
     {

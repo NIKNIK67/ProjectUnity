@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077946af3a396a240a4c0e15b445c7a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pl: {fileID: 0}
+  pl: {fileID: 2986610501796832155, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf, type: 3}
   MH: {fileID: 8886899011964982966}
   BulletPref: {fileID: 2652561334209859943, guid: 7432c34eda30d124c98c1c49c3a214a5,
     type: 3}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 8
-  pl: {fileID: 0}
+  pl: {fileID: 2986610501796832155, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf, type: 3}
   BilletPref: {fileID: 2652561334209859943, guid: 7432c34eda30d124c98c1c49c3a214a5,
     type: 3}
   SmokePref: {fileID: 0}

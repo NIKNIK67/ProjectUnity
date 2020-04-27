@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class First : MonoBehaviour
 {
@@ -23,18 +24,48 @@ public class First : MonoBehaviour
     float SlashReload;
     float HpMinusReload;
     float ShadowCreate = 0.05f;
-
+    public int coin;
+    public int Wood;
+    public int Iron;
+    public int Stone;
+    public bool ispause = false;
+    public GameObject UI;
+    public GameObject Sword;
+    public bool isopenBlade = false;
+    public GameObject MapCanvas = null;
+    public float DashSpeed=500;
+    public float JumpPower = 78;
+    data s;
+    ForSaves saves;
 
     void Start()
     {
-    	rb = GetComponent<Rigidbody2D> ();
+        s = this.gameObject.GetComponent<ForSaves>().MyData;
+        Iron = s.iron;
+        Wood = s.wood;
+        Stone = s.rock;
+        coin = s.coin;
+        saves = gameObject.GetComponent<ForSaves>();
+        rb = GetComponent<Rigidbody2D> ();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (ispause == false)
+            {
+                Pause();
+            }
+            else
+            {
+                Resume();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.R)&&isopenBlade)
         {
             Instantiate(M1, new Vector3(transform.position.x, transform.position.y + 15, -15), Quaternion.identity);
         }
@@ -93,15 +124,17 @@ public class First : MonoBehaviour
             transform.eulerAngles=new Vector3(0, 180.0f, 0);
 
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&& a==1)
         {
             rb.velocity = Vector2.zero;
-            rb.AddForce(transform.up * 78f, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * JumpPower, ForceMode2D.Impulse);
+            a = 0;
            
 
         }
         if (Input.GetKey(KeyCode.E) && T <= 0 && SlashReload < 0 && !IsUp)
         {
+            UsingLadder = 0;
             rb.velocity = Vector2.zero;
             SlashReload = 1;
             Slash.x = -(transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
@@ -119,7 +152,12 @@ public class First : MonoBehaviour
         else if (T > 0)
         {
             anim.SetInteger("test", 5);
-            rb.AddForce(Slash.normalized * 500 * Time.deltaTime, ForceMode2D.Impulse);
+            if (IsUp)
+            {
+                T = 0;
+            }
+
+            rb.AddForce(Slash.normalized * DashSpeed * Time.deltaTime, ForceMode2D.Impulse);
             if (T2 < 0)
             {
                 T2 = ShadowCreate;
@@ -138,7 +176,19 @@ public class First : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
             T -= 2;
         }
-        
+        if (rb.velocity.x>0)
+        {
+            transform.eulerAngles= new Vector2 (0,0);
+        }
+        if (rb.velocity.x < 0)
+        {
+            transform.eulerAngles = new Vector2(0, -180);
+        }
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
     
     void FixedUpdate(){
@@ -149,10 +199,32 @@ public class First : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-      if (col.gameObject.tag == "Platform")
+        if (col.gameObject.tag != "Wall")
+        {
+            a = 1;
+        }
+        
+        if (col.gameObject.tag == "Platform")
         {
             this.transform.parent = col.transform;
         }
+        if (col.gameObject.tag == "Wood")
+        {
+            Wood += 1;
+            
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Iron")
+        {
+            Iron += 1;
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Stone")
+        {
+            Stone += 1;
+            Destroy(col.gameObject);
+        }
+        
     }
     private void OnCollisionExit2D(Collision2D col)
     {
@@ -163,8 +235,61 @@ public class First : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Lader")
+        if (collision.gameObject.tag == "Map")
         {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (collision.GetComponent<MapSelect>().part == 0)
+                {
+                    MapCanvas.SetActive(true);
+                }
+            }
+            
+            
+            
+        }
+        if (collision.gameObject.tag == "Portal")
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                s.iron = Iron;
+                s.wood = Wood;
+                s.rock = Stone;
+                s.coin = coin;
+                saves.SaveMyData();
+                Application.LoadLevel(1);
+                
+                
+            }
+        }
+        if (collision.gameObject.tag == "Home")
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                s.iron = Iron;
+                s.wood = Wood;
+                s.rock = Stone;
+                s.coin = coin;
+                saves.SaveMyData();
+                Application.LoadLevel(2);
+            }
+        }
+        if (collision.gameObject.tag =="Door")
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                s.iron = Iron;
+                s.wood = Wood;
+                s.rock = Stone;
+                s.coin = coin;
+                saves.SaveMyData();
+                Application.LoadLevel(1);
+            }
+                
+        }
+        if (collision.gameObject.tag == "Lader"&& T<0)
+        {
+            
             if (UsingLadder == 1)
             {
                 rb.velocity = new Vector2(0, 2);
@@ -183,7 +308,9 @@ public class First : MonoBehaviour
                 rb.velocity = new Vector2(rb.transform.position.x, 20f);
                 
             }
+            Sword.SetActive(false);
         }
+       
         if (collision.gameObject.tag == "Bullet" && HpMinusReload<0)
         {
             HpMinusReload = 1;
@@ -197,7 +324,34 @@ public class First : MonoBehaviour
         {
             UsingLadder = 0;    
         }
+        Sword.SetActive(true);
+        if (collision.gameObject.tag == "Map")
+        {
+            MapCanvas.SetActive(false);
+        }
     }
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        UI.SetActive(true);
+        ispause = true;
+
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        UI.SetActive(false);
+        ispause = false;
+
+
+    }
+    public void Exit()
+    {
+       Application.LoadLevel(0);
+        Time.timeScale = 1;
+        ispause = false;
+    }
+    
     //void FixUpdate(){
     //	rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 12f, rb.velocity.y);
     //}

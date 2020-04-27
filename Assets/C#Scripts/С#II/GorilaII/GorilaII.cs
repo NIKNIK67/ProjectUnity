@@ -30,7 +30,12 @@ public class GorilaII : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
         direction.x = 1;
+        maxX = transform.position.x + 20;
+        minX = transform.position.x - 20;
+        LeftEndRangeX = minX - 20;
+        RightEndRangeX = maxX + 20;
     }
     void Update()
     {

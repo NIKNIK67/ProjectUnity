@@ -10,6 +10,22 @@ TagManager:
   - Ground
   - Platform
   - BulletForRaven
+  - Stone
+  - Inv
+  - Iron
+  - Arena
+  - Wood
+  - HP
+  - Enemy
+  - Menu
+  - Coin
+  - ToSpawn
+  - Portal
+  - Home
+  - Door
+  - Wall
+  - Map
+  - BigMap
   layers:
   - Default
   - TransparentFX
