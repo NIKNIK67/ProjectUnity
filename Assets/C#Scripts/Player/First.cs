@@ -342,8 +342,6 @@ public class First : MonoBehaviour
         Time.timeScale = 1;
         UI.SetActive(false);
         ispause = false;
-
-
     }
     public void Exit()
     {
