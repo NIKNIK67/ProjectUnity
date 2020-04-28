@@ -15,7 +15,7 @@ public class First : MonoBehaviour
     public float T;
     float T2;
     int a = 1;
-    int UsingLadder = 0;
+    public int UsingLadder = 0;
     Vector2 Slash;
     Rigidbody2D rb;
     Animator anim;
@@ -96,7 +96,7 @@ public class First : MonoBehaviour
         {
             HpMinusReload -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.Q) && AtackReload < 0)
+        if (Input.GetKey(KeyCode.Q) && AtackReload < 0 && UsingLadder != 1)
         {
             AtackReload = 0.3f;
             
@@ -236,7 +236,12 @@ public class First : MonoBehaviour
             Stone += 1;
             Destroy(col.gameObject);
         }
-        
+        if (col.gameObject.tag == "Coin")
+        {
+            coin += 1;
+            Destroy(col.gameObject);
+        }
+
     }
     private void OnCollisionExit2D(Collision2D col)
     {
@@ -247,79 +252,13 @@ public class First : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "WizardStore")
-        {
-            if (Input.GetKey(KeyCode.F))
-            {
-                s.iron = Iron;
-                s.wood = Wood;
-                s.rock = Stone;
-                s.coin = coin;
-                saves.SaveMyData();
-                StartCoroutine(MYLVL(9));
-                  
-            }
-           
-        }
-        if (collision.gameObject.tag == "Map")
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (collision.GetComponent<MapSelect>().part == 0)
-                {
-                    MapCanvas.SetActive(true);
-                }
-            }
-            
-            
-            
-        }
-        if (collision.gameObject.tag == "Portal")
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                s.iron = Iron;
-                s.wood = Wood;
-                s.rock = Stone;
-                s.coin = coin;
-                saves.SaveMyData();
-                StartCoroutine(MYLVL(1));
-                
-                
-                
-            }
-        }
-        if (collision.gameObject.tag == "Home")
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                s.iron = Iron;
-                s.wood = Wood;
-                s.rock = Stone;
-                s.coin = coin;
-                saves.SaveMyData();
-                StartCoroutine(MYLVL(2));
-               
-            }
-        }
-        if (collision.gameObject.tag =="Door")
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                s.iron = Iron;
-                s.wood = Wood;
-                s.rock = Stone;
-                s.coin = coin;
-                saves.SaveMyData();
-                StartCoroutine(MYLVL(1));
-            }
-                
-        }
+
         if (collision.gameObject.tag == "Lader"&& T<0)
         {
             
             if (UsingLadder == 1)
             {
+                Sword.SetActive(false);
                 rb.velocity = new Vector2(0, 2);
                 anim.SetInteger("test", 4);
             }
@@ -336,7 +275,6 @@ public class First : MonoBehaviour
                 rb.velocity = new Vector2(rb.transform.position.x, 20f);
                 
             }
-            Sword.SetActive(false);
         }
        
         if (collision.gameObject.tag == "Bullet" && HpMinusReload<0)
@@ -354,10 +292,6 @@ public class First : MonoBehaviour
             UsingLadder = 0;    
         }
         Sword.SetActive(true);
-        if (collision.gameObject.tag == "Map")
-        {
-            MapCanvas.SetActive(false);
-        }
     }
     public void Pause()
     {

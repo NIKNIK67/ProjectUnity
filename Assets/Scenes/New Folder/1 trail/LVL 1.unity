@@ -5806,6 +5806,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Musket (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 936864260717117207, guid: c8ca6bff6c6428e459b4d6bde2f468a5,
+        type: 3}
+      propertyPath: Coin
+      value: 
+      objectReference: {fileID: 7684637835908647764, guid: 5620c184eb94eec40a60469212d574f8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ca6bff6c6428e459b4d6bde2f468a5, type: 3}
 --- !u!1001 &408180619
@@ -10233,7 +10239,7 @@ PrefabInstance:
     - target: {fileID: 2986610501796832157, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -50
+      value: -98.5
       objectReference: {fileID: 0}
     - target: {fileID: 2986610501796832157, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf,
         type: 3}
@@ -11146,6 +11152,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Musket (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 936864260717117207, guid: c8ca6bff6c6428e459b4d6bde2f468a5,
+        type: 3}
+      propertyPath: Coin
+      value: 
+      objectReference: {fileID: 7684637835908647764, guid: 5620c184eb94eec40a60469212d574f8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ca6bff6c6428e459b4d6bde2f468a5, type: 3}
 --- !u!1 &842737791
@@ -14148,6 +14160,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 586703990939396384, guid: 6cf6d42cf49bef94db3c7d905d75aecf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -172.2002
+      objectReference: {fileID: 0}
+    - target: {fileID: 586703991404674808, guid: 6cf6d42cf49bef94db3c7d905d75aecf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -95.799805
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cf6d42cf49bef94db3c7d905d75aecf, type: 3}
 --- !u!1 &1039080247
@@ -14421,6 +14443,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Musket (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 936864260717117207, guid: c8ca6bff6c6428e459b4d6bde2f468a5,
+        type: 3}
+      propertyPath: Coin
+      value: 
+      objectReference: {fileID: 7684637835908647764, guid: 5620c184eb94eec40a60469212d574f8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ca6bff6c6428e459b4d6bde2f468a5, type: 3}
 --- !u!4 &1057439232 stripped
@@ -14979,6 +15007,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da53da8b8c8e7fe4aab675b2e9754a9e, type: 3}
+--- !u!1 &1122131863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9063420713581211955, guid: fdbf15685d734fc4bb93132043b5abdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 433768882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1122131864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122131863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumperOfLocation: 1
+  MapCanvas: {fileID: 0}
 --- !u!1 &1126731472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2944934028915544585, guid: da53da8b8c8e7fe4aab675b2e9754a9e,
@@ -28047,6 +28095,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Musket (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 936864260717117207, guid: c8ca6bff6c6428e459b4d6bde2f468a5,
+        type: 3}
+      propertyPath: Coin
+      value: 
+      objectReference: {fileID: 7684637835908647764, guid: 5620c184eb94eec40a60469212d574f8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ca6bff6c6428e459b4d6bde2f468a5, type: 3}
 --- !u!4 &2044943717 stripped

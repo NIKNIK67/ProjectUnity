@@ -1063,6 +1063,7 @@ GameObject:
   - component: {fileID: 191138793}
   - component: {fileID: 191138796}
   - component: {fileID: 191138795}
+  - component: {fileID: 191138797}
   m_Layer: 0
   m_Name: Maps_7
   m_TagString: Map
@@ -1176,6 +1177,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 28.867588, y: 13.738291}
   m_EdgeRadius: 0
+--- !u!114 &191138797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191138792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumperOfLocation: 0
+  MapCanvas: {fileID: 2010256917}
 --- !u!1 &201864884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,6 +4247,7 @@ GameObject:
   - component: {fileID: 681786417}
   - component: {fileID: 681786420}
   - component: {fileID: 681786419}
+  - component: {fileID: 681786421}
   m_Layer: 0
   m_Name: Maps_1
   m_TagString: Map
@@ -4345,6 +4361,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 28.667534, y: 13.449999}
   m_EdgeRadius: 0
+--- !u!114 &681786421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681786416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumperOfLocation: 0
+  MapCanvas: {fileID: 2010256917}
 --- !u!4 &686364864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
@@ -7672,12 +7702,12 @@ PrefabInstance:
     - target: {fileID: 2986610501796832157, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 105.7
+      value: 90.7
       objectReference: {fileID: 0}
     - target: {fileID: 2986610501796832157, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.56
+      value: 8.03
       objectReference: {fileID: 0}
     - target: {fileID: 2986610501796832157, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf,
         type: 3}
@@ -9484,6 +9514,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1388043490}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1530331506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6768361417827950345, guid: c801d3c33c519b14ba574e6fc5844464,
+    type: 3}
+  m_PrefabInstance: {fileID: 6768361417571833381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1530331507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530331506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumperOfLocation: 1
+  MapCanvas: {fileID: 0}
 --- !u!1 &1532444873
 GameObject:
   m_ObjectHideFlags: 0
@@ -13648,7 +13698,7 @@ PrefabInstance:
     - target: {fileID: 6768361417827950347, guid: c801d3c33c519b14ba574e6fc5844464,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 105.4
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: 6768361417827950347, guid: c801d3c33c519b14ba574e6fc5844464,
         type: 3}

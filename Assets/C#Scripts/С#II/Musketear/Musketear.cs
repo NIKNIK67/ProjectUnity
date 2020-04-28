@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Musketear : MonoBehaviour
 {
+    public GameObject Coin;
     public float HP = 10;
     public GameObject pl;
     public GameObject BilletPref;
@@ -153,6 +154,12 @@ public class Musketear : MonoBehaviour
             }
             else
             {
+                int RandomVar;
+                RandomVar = Random.Range(5, 10);
+                for (int i=0;i< RandomVar; i += 1)
+                {
+                    Instantiate(Coin, transform.position, Quaternion.identity);
+                }
                 Destroy(gameObject);
             }
         }

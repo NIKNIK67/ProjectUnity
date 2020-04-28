@@ -3360,6 +3360,7 @@ GameObject:
   - component: {fileID: 1256541034}
   - component: {fileID: 1256541033}
   - component: {fileID: 1256541035}
+  - component: {fileID: 1256541036}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: WizardStore
@@ -3444,7 +3445,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.9725819, y: -0.15114784}
+  m_Offset: {x: -2.7696304, y: -6.6911983}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3455,8 +3456,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.821888, y: 23.697704}
+  m_Size: {x: 5.3374634, y: 10.617603}
   m_EdgeRadius: 0
+--- !u!114 &1256541036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256541032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumperOfLocation: 9
+  MapCanvas: {fileID: 0}
 --- !u!1 &1291916073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8644049400118784924, guid: 4640bb326762c8546aab97bd348dc788,
@@ -6130,6 +6145,7 @@ GameObject:
   - component: {fileID: 2108797783}
   - component: {fileID: 2108797782}
   - component: {fileID: 2108797784}
+  - component: {fileID: 2108797785}
   m_Layer: 0
   m_Name: House
   m_TagString: Home
@@ -6227,6 +6243,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.780758, y: 12.121433}
   m_EdgeRadius: 0
+--- !u!114 &2108797785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108797781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumperOfLocation: 2
+  MapCanvas: {fileID: 0}
 --- !u!1 &2123657590
 GameObject:
   m_ObjectHideFlags: 0
