@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GromBirdScript : MonoBehaviour
 {
+    First Damage;
     public GameObject Bullet;
     public float HP = 12;
     public Vector2 p1;
@@ -15,6 +16,7 @@ public class GromBirdScript : MonoBehaviour
     Vector2[] positions  =new Vector2[4];
     void Start()
     {
+        Damage = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
         StartCoroutine(NewPositon());
         sr = GetComponent<SpriteRenderer>();
         positions[0] = p1;
@@ -46,7 +48,7 @@ public class GromBirdScript : MonoBehaviour
         if (collision.CompareTag("HPPrefab"))
         {
             sr.color = Color.red;
-            HP -= 1;
+            HP -= Damage.Damage;
             Invoke("BecomeWhite", 0.2f);
             if (HP > 0)
             {

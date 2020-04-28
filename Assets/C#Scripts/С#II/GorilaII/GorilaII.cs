@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GorilaII : MonoBehaviour
 {
+    First Damage;
     public float HP = 10;
     public GameObject dead;
     public GameObject pl;
@@ -26,6 +27,7 @@ public class GorilaII : MonoBehaviour
     SpriteRenderer sr;
     void Start()
     {
+        Damage = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
         pl = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -86,7 +88,7 @@ public class GorilaII : MonoBehaviour
         if (collision.CompareTag("HPPrefab"))
         {
             sr.color = Color.red;
-            HP -= 1;
+            HP -= Damage.Damage;
             Invoke("BecomeWhite", 0.2f);
             if (HP > 0)
             {

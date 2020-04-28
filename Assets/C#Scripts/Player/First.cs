@@ -35,9 +35,12 @@ public class First : MonoBehaviour
     public GameObject MapCanvas = null;
     public float DashSpeed=500;
     public float JumpPower = 78;
+    public float DefaultDamage = 1;
+    public float Damage = 1;
+    public float WalkSpeed = 20;
     data s;
     ForSaves saves;
-
+    public float[] DamageModify = { 1, 1, 1 }; 
     void Start()
     {
         s = this.gameObject.GetComponent<ForSaves>().MyData;
@@ -48,6 +51,7 @@ public class First : MonoBehaviour
         saves = gameObject.GetComponent<ForSaves>();
         rb = GetComponent<Rigidbody2D> ();
         anim = GetComponent<Animator>();
+        Damage = DefaultDamage * DamageModify[2];
         
     }
 
@@ -194,7 +198,7 @@ public class First : MonoBehaviour
     void FixedUpdate(){
         if (!(T>0))
         {
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 20f, rb.velocity.y);
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * WalkSpeed, rb.velocity.y);
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -316,6 +320,7 @@ public class First : MonoBehaviour
             HpMinusReload = 1;
             CCamera.hited = true;
             HP -= 1;
+            Damage = DefaultDamage * DamageModify[HP - 1];
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

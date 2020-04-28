@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Helicopter : MonoBehaviour
 {
+    First Damage;
     public float HP = 8;
     public GameObject pl;
     public GameObject BilletPref;
@@ -31,6 +32,7 @@ public class Helicopter : MonoBehaviour
 
     void Start()
     {
+        Damage = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
         LefPos = new Vector2(transform.position.x-20, transform.position.y+10);
         RightPos = new Vector2(transform.position.x+20, transform.position.y-10);
         pl = GameObject.FindGameObjectWithTag("Player");
@@ -152,7 +154,7 @@ public class Helicopter : MonoBehaviour
         if (collision.CompareTag("HPPrefab"))
         {
             sr.color = Color.red;
-            HP -= 1;
+            HP -= Damage.Damage;
             Invoke("BecomeWhite", 0.2f);
             if (HP > 0)
             {

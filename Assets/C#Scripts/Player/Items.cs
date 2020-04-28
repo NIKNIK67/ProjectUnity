@@ -40,7 +40,7 @@ public class Items : MonoBehaviour
     }
     public void Update1()
     {
-        GetComponent<First>().DashSpeed *= 1.2f;
+        GetComponent<First>().DamageModify[0] = 2;
     }
     public void Update2()
     {
@@ -48,15 +48,16 @@ public class Items : MonoBehaviour
     }
     public void Update3()
     {
-        GetComponent<First>().DashSpeed *= 1.2f;
+        GetComponent<First>().DamageModify[0] = 1.2f;
+        GetComponent<First>().DamageModify[0] = 1.5f;
     }
     public void Update4()
     {
-        GetComponent<First>().DashSpeed *= 1.2f;
+        GetComponent<First>().JumpPower *= 1.1f;
     }
     public void Update5()
     {
-        GetComponent<First>().DashSpeed *= 1.2f;
+        GetComponent<First>().WalkSpeed *= 1.2f;
     }
     public void SendData()
     {

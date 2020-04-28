@@ -18,6 +18,10 @@ public class triggerToBuy : MonoBehaviour
     private void Start()
     {
         AllData = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Items>().Skils[Number])
+        {
+            Destroy(gameObject);
+        }
     }
     void Update()
     {

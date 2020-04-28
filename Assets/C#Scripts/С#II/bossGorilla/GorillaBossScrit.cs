@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GorillaBossScrit : MonoBehaviour
 {
+    First Damage;
     public bool isLeft;
     public float HP = 100;
     public float T = 10;
@@ -22,6 +23,7 @@ public class GorillaBossScrit : MonoBehaviour
     bool IsLeft;
     void Start()
     {
+        Damage = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
@@ -219,7 +221,7 @@ public class GorillaBossScrit : MonoBehaviour
 
         if (collision.CompareTag("HPPrefab"))
         {
-            HP -= 1;
+            HP -= Damage.Damage;
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * 1);
             sr.color = Color.red;

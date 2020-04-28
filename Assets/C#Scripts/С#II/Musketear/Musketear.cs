@@ -25,8 +25,10 @@ public class Musketear : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
+    First Damage;
     void Start()
     {
+        Damage = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
         maxX = transform.position.x + 20;
         minX = transform.position.x - 20;
         pl = GameObject.FindGameObjectWithTag("Player");
@@ -143,7 +145,7 @@ public class Musketear : MonoBehaviour
         if (collision.CompareTag("HPPrefab"))
         {
             sr.color = Color.red;
-            HP -= 1;
+            HP -= Damage.Damage;
             Invoke("BecomeWhite", 0.2f);
             if (HP > 0)
             {
