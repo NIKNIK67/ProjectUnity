@@ -139,6 +139,15 @@ MonoBehaviour:
   MapCanvas: {fileID: 0}
   DashSpeed: 500
   JumpPower: 78
+  DefaultDamage: 1
+  Damage: 1
+  WalkSpeed: 20
+  DamageModify:
+  - 1
+  - 1
+  - 1
+  Dead: {fileID: 8644049400118784924, guid: 4640bb326762c8546aab97bd348dc788, type: 3}
+  Vhod: {fileID: 5606489155954225644, guid: 461236f46a92e9640b7d23a2b7b1ec5f, type: 3}
 --- !u!50 &2986610501796832153
 Rigidbody2D:
   serializedVersion: 4
@@ -172,11 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44c0fcac93450040a2d4db7eff37b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CupOfBlood: 0
-  PowerOfSolaris: 0
-  SkeletonRage: 0
-  FrogLegs: 0
-  PumaSpeed: 0
+  Skils: 0000000000
 --- !u!61 &2986610501796832152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,11 +221,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyData:
+    coin: 0
     wood: 0
     rock: 0
     iron: 0
     levelsOne: 000000000000
     levelsTwo: 000000000000
+    Skills: 0000000000
 --- !u!1 &2986610501822969517
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,7 +40,7 @@ public class Items : MonoBehaviour
     }
     public void Update1()
     {
-        GetComponent<First>().DamageModify[0] = 2;
+        GetComponent<First>().DamageModify[2] = 2;
     }
     public void Update2()
     {
@@ -48,7 +48,7 @@ public class Items : MonoBehaviour
     }
     public void Update3()
     {
-        GetComponent<First>().DamageModify[0] = 1.2f;
+        GetComponent<First>().DamageModify[1] = 1.2f;
         GetComponent<First>().DamageModify[0] = 1.5f;
     }
     public void Update4()

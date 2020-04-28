@@ -40,9 +40,12 @@ public class First : MonoBehaviour
     public float WalkSpeed = 20;
     data s;
     ForSaves saves;
-    public float[] DamageModify = { 1, 1, 1 }; 
+    public float[] DamageModify = { 1, 1, 1 };
+    public GameObject Dead;
+    public GameObject Vhod;
     void Start()
     {
+        Vhod.SetActive(true);
         s = this.gameObject.GetComponent<ForSaves>().MyData;
         Iron = s.iron;
         Wood = s.wood;
@@ -190,7 +193,12 @@ public class First : MonoBehaviour
         }
         if (HP <= 0)
         {
-            Destroy(gameObject);
+            
+            StartCoroutine(MYLVL(1));
+            
+
+
+
         }
 
     }
@@ -239,6 +247,20 @@ public class First : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "WizardStore")
+        {
+            if (Input.GetKey(KeyCode.F))
+            {
+                s.iron = Iron;
+                s.wood = Wood;
+                s.rock = Stone;
+                s.coin = coin;
+                saves.SaveMyData();
+                StartCoroutine(MYLVL(9));
+                  
+            }
+           
+        }
         if (collision.gameObject.tag == "Map")
         {
             if (Input.GetKeyDown(KeyCode.F))
@@ -261,7 +283,8 @@ public class First : MonoBehaviour
                 s.rock = Stone;
                 s.coin = coin;
                 saves.SaveMyData();
-                Application.LoadLevel(1);
+                StartCoroutine(MYLVL(1));
+                
                 
                 
             }
@@ -275,7 +298,8 @@ public class First : MonoBehaviour
                 s.rock = Stone;
                 s.coin = coin;
                 saves.SaveMyData();
-                Application.LoadLevel(2);
+                StartCoroutine(MYLVL(2));
+               
             }
         }
         if (collision.gameObject.tag =="Door")
@@ -287,7 +311,7 @@ public class First : MonoBehaviour
                 s.rock = Stone;
                 s.coin = coin;
                 saves.SaveMyData();
-                Application.LoadLevel(1);
+                StartCoroutine(MYLVL(1));
             }
                 
         }
@@ -350,11 +374,24 @@ public class First : MonoBehaviour
     }
     public void Exit()
     {
-       Application.LoadLevel(0);
+        StartCoroutine(MYLVL(0));
+        
         Time.timeScale = 1;
         ispause = false;
     }
-    
+    private void Loadlvl()
+    {
+        
+
+    }
+    IEnumerator MYLVL(int numb)
+    {
+        Dead.SetActive(true);
+        yield return new WaitForSeconds(2);
+        
+        Destroy(gameObject);
+        Application.LoadLevel(numb);
+    }
     //void FixUpdate(){
     //	rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 12f, rb.velocity.y);
     //}

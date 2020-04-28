@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Folder/1 trail/BossLvl.unity
     guid: 0000806b5bac5a142b1c93b373d6ff02
+  - enabled: 1
+    path: Assets/Scenes/New Folder/WizarsDhopScene.unity
+    guid: a22caaae3f9afc943b91b5afd5639713
   m_configObjects: {}
