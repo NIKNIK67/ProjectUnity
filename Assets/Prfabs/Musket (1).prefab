@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28143cda5682f75468f2b6d853431ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coin: {fileID: 7684637835908647764, guid: 5620c184eb94eec40a60469212d574f8, type: 3}
   HP: 10
   pl: {fileID: 2986610501796832155, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf, type: 3}
   BilletPref: {fileID: 2652561334209859943, guid: 7432c34eda30d124c98c1c49c3a214a5,

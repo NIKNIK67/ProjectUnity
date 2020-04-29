@@ -8,11 +8,15 @@ public class Boss : MonoBehaviour
     public GameObject pl;
     SpriteRenderer sr;
     Rigidbody2D rb;
+    public GameObject Coin;
     public GameObject LSpref;
     public GameObject RSpref;
+    public GameObject EBpref;
+    First Damage;
 
     void Start()
     {
+        Damage = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
         pl = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(Atacking());
     }
@@ -22,12 +26,35 @@ public class Boss : MonoBehaviour
     {
 
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("adwdaw");
+        if (collision.CompareTag("HPPrefab"))
+        {
+            sr.color = Color.red;
+            HP -= Damage.Damage;
+            Invoke("BecomeWhite", 0.2f);
+            if (HP > 0)
+            {
+            }
+            else
+            {
+                int RandomVar;
+                RandomVar = Random.Range(70, 200);
+                for (int i = 0; i < RandomVar; i += 1)
+                {
+                    Instantiate(Coin, transform.position, Quaternion.identity);
+                }
+                Destroy(gameObject);
+            }
+        }
+    }
     IEnumerator Atacking()
     {
         while (true)
         {
-            yield return new WaitForSeconds(8);
-            switch (Random.Range(1, 4))
+            yield return new WaitForSeconds(10);
+            switch (Random.Range(1, 5))
             {
                 case 1:
                     UseRight(true);
@@ -39,6 +66,9 @@ public class Boss : MonoBehaviour
                     UseRight(false);
                     UseLeft(false);
                     break;
+                case 4:
+                    EB();
+                    break;
             }
         }
     }
@@ -49,7 +79,7 @@ public class Boss : MonoBehaviour
         Instantiate(RSpref, new Vector3(74.8f, -2.6f, 100), Quaternion.identity);
         if (HP < 35 && all)
         {
-            Instantiate(RSpref, new Vector3(74.8f, -10.2F, 100), new Quaternion(180, 0,0,0));
+            Instantiate(RSpref, new Vector3(74.8f, -1.1F, 100),Quaternion.identity);
         }
         GameObject[] spires = GameObject.FindGameObjectsWithTag("Right");
         foreach (GameObject spire in spires)
@@ -70,7 +100,7 @@ public class Boss : MonoBehaviour
         Instantiate(LSpref, new Vector3(-82.4f, -2.6f, 100), Quaternion.identity);
         if (HP < 35 && all)
         {
-            Instantiate(LSpref, new Vector3(-82.4f, -10.2F, 100), new Quaternion(180, 0, 0, 0));
+            Instantiate(LSpref, new Vector3(-82.4f, -1.1f, 100), Quaternion.identity);
         }
         GameObject[] spires = GameObject.FindGameObjectsWithTag("Left");
         foreach (GameObject spire in spires)
@@ -85,26 +115,18 @@ public class Boss : MonoBehaviour
 
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
+    void EB()
+    {
+        Instantiate(EBpref, new Vector2(transform.position.x + 20, transform.position.y + 15), Quaternion.identity);
+        Instantiate(EBpref, new Vector2(transform.position.x - 20, transform.position.y + 15), new Quaternion(0,0,180,0));
+        if (HP < 25)
         {
-
-            if (collision.CompareTag("HPPrefab"))
-            {
-                sr.color = Color.red;
-                HP -= 1;
-                Invoke("BecomeWhite", 0.2f);
-                if (HP > 0)
-                {
-                    rb.AddForce(transform.up * 300, ForceMode2D.Impulse);
-                }
-                else
-                {
-                    Destroy(gameObject);
-                }
-            }
-        }
-        void BecomeWhite()
-        {
-            sr.color = Color.white;
+            Instantiate(EBpref, new Vector2(transform.position.x, transform.position.y + 30), new Quaternion(0, 0,-90, 0));
         }
     }
+    void BecomeWhite()
+    {
+        sr.color = Color.white;
+    }
+}
+
