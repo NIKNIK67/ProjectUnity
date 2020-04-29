@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6881135894198830619}
   m_Layer: 9
   m_Name: EnergyBulletPrefab
-  m_TagString: Bullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

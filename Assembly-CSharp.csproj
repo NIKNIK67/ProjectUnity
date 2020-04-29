@@ -92,6 +92,8 @@
     <Compile Include="Assets\C#Scripts\triggerToBuy.cs" />
     <Compile Include="Assets\C#Scripts\С#II\Boss2\Boss.cs" />
     <Compile Include="Assets\C#Scripts\С#II\Boss2\Boss2SpireScript.cs" />
+    <Compile Include="Assets\C#Scripts\С#II\Boss2\GiantArrow.cs" />
+    <Compile Include="Assets\C#Scripts\С#II\Boss2\HpBoss2.cs" />
     <Compile Include="Assets\C#Scripts\С#II\Bullet\ENergyBullet.cs" />
     <Compile Include="Assets\C#Scripts\С#II\CameraAnim.cs" />
     <Compile Include="Assets\C#Scripts\С#II\GorilaII\GorilaII.cs" />

@@ -68,6 +68,7 @@ public class ENergyBullet : MonoBehaviour
     IEnumerator stay()
     {
         yield return new WaitForSeconds(1);
+        tag = "Bullet";
         Stay = false;
     }
     public void DestroyWithPArticle()

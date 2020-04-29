@@ -8,6 +8,7 @@ public class Boss2SpireScript : MonoBehaviour
     public bool Atack = false;
     public GameObject Direction;
     public float Times;
+    public float speed = 1;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class Boss2SpireScript : MonoBehaviour
         float timer = 1f;
         while (timer > 0)
         {
+            tag = "Untagged";
             yield return new WaitForSeconds(Time.deltaTime);
             timer -= Time.deltaTime;
             transform.position = Vector2.Lerp(transform.position, Direction.transform.position, Time.deltaTime * timer * 5);
@@ -62,7 +64,7 @@ public class Boss2SpireScript : MonoBehaviour
         {
             yield return new WaitForSeconds(Time.deltaTime);
             timer -= Time.deltaTime;
-            transform.position = Vector2.Lerp(transform.position, Direction.transform.position, Time.deltaTime * 30);
+            transform.position = Vector2.Lerp(transform.position, Direction.transform.position, Time.deltaTime * 30 * speed);
         }
         Destroy(gameObject);
     }

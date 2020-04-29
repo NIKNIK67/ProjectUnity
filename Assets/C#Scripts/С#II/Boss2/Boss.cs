@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Boss : MonoBehaviour
 {
+    public float time = 3;
     public float HP = 50;
     public GameObject pl;
     SpriteRenderer sr;
@@ -12,7 +14,9 @@ public class Boss : MonoBehaviour
     public GameObject LSpref;
     public GameObject RSpref;
     public GameObject EBpref;
+    public GameObject GA;
     First Damage;
+
 
     void Start()
     {
@@ -51,33 +55,68 @@ public class Boss : MonoBehaviour
     }
     IEnumerator Atacking()
     {
+        int r = 6;
         while (true)
         {
-            yield return new WaitForSeconds(10);
-            switch (Random.Range(1, 5))
+            yield return new WaitForSeconds(time);
+            if (HP < 70)
+            {
+                r = 5;
+            }
+            switch (Random.Range(1, r))
             {
                 case 1:
                     UseRight(true);
+                    if (HP > 50)
+                    {
+                        time = 6;
+                    }
+                    else
+                    {
+                        time = 8;
+                    }
                     break;
                 case 2:
+                    if (HP> 50) 
+                    {
+                        time = 6;
+                    }
+                    else
+                    {
+                        time = 8;
+                    }
                     UseLeft(true);
                     break;
                 case 3:
+                    time = 8;
                     UseRight(false);
                     UseLeft(false);
                     break;
                 case 4:
                     EB();
+                    time = 9;
+                    break;
+                case 5:
+                    GAs();
+                    time = 3;
                     break;
             }
         }
     }
+    void GAs()
+    {
+        Instantiate(GA, Vector2.zero, Quaternion.identity);
+    }
     void UseRight(bool all)
     {
-        print("Right");
         float t = 0;
+        if (!all && HP < 70)
+        {
+            t += 1;
+        }
+    
         Instantiate(RSpref, new Vector3(74.8f, -2.6f, 100), Quaternion.identity);
-        if (HP < 35 && all)
+        if (HP < 50 && all)
         {
             Instantiate(RSpref, new Vector3(74.8f, -1.1F, 100),Quaternion.identity);
         }
@@ -86,8 +125,12 @@ public class Boss : MonoBehaviour
         {
            spire.GetComponent<Boss2SpireScript>().Atack = true;
            spire.GetComponent<Boss2SpireScript>().Times = t;
+            if (!all)
+            {
+                spire.GetComponent<Boss2SpireScript>().speed = 0.8f;
+            }
             t += 0.1f;
-            if (t == 1.2f)
+            if (t == 1.2f && all)
             {
                 t += 1;
             }
@@ -96,10 +139,16 @@ public class Boss : MonoBehaviour
     void UseLeft(bool all)
     {
         float t = 0;
+        if (!all && HP < 70)
+        {
+            t += 1;
+            Instantiate(GA, Vector2.zero, Quaternion.identity);
+        }
         print("Left");
         Instantiate(LSpref, new Vector3(-82.4f, -2.6f, 100), Quaternion.identity);
-        if (HP < 35 && all)
+        if (HP < 50 && all)
         {
+
             Instantiate(LSpref, new Vector3(-82.4f, -1.1f, 100), Quaternion.identity);
         }
         GameObject[] spires = GameObject.FindGameObjectsWithTag("Left");
@@ -107,8 +156,12 @@ public class Boss : MonoBehaviour
         {
             spire.GetComponent<Boss2SpireScript>().Atack = true;
             spire.GetComponent<Boss2SpireScript>().Times = t;
+            if (!all)
+            {
+                spire.GetComponent<Boss2SpireScript>().speed = 0.8f;
+            }
             t += 0.1f;
-            if (t == 1.2f)
+            if (t == 1.2f && all)
             {
                 t += 1;
             }
@@ -119,7 +172,7 @@ public class Boss : MonoBehaviour
     {
         Instantiate(EBpref, new Vector2(transform.position.x + 20, transform.position.y + 15), Quaternion.identity);
         Instantiate(EBpref, new Vector2(transform.position.x - 20, transform.position.y + 15), new Quaternion(0,0,180,0));
-        if (HP < 25)
+        if (HP < 60)
         {
             Instantiate(EBpref, new Vector2(transform.position.x, transform.position.y + 30), new Quaternion(0, 0,-90, 0));
         }
