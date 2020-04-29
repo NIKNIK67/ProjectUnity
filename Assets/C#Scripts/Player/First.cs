@@ -61,6 +61,10 @@ public class First : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (UsingLadder == 0)
+        {
+            Sword.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (ispause == false)
@@ -236,11 +240,6 @@ public class First : MonoBehaviour
             Stone += 1;
             Destroy(col.gameObject);
         }
-        if (col.gameObject.tag == "Coin")
-        {
-            coin += 1;
-            Destroy(col.gameObject);
-        }
 
     }
     private void OnCollisionExit2D(Collision2D col)
@@ -248,6 +247,14 @@ public class First : MonoBehaviour
         if (col.gameObject.tag == "Platform")
         {
             this.transform.parent = null;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Coin")
+        {
+            coin += 1;
+            Destroy(col.gameObject);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -289,9 +296,8 @@ public class First : MonoBehaviour
     {
         if (collision.gameObject.tag == "Lader")
         {
-            UsingLadder = 0;    
+            UsingLadder = 0;
         }
-        Sword.SetActive(true);
     }
     public void Pause()
     {
@@ -313,11 +319,7 @@ public class First : MonoBehaviour
         Time.timeScale = 1;
         ispause = false;
     }
-    private void Loadlvl()
-    {
-        
 
-    }
     IEnumerator MYLVL(int numb)
     {
         Dead.SetActive(true);

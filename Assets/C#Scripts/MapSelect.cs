@@ -9,8 +9,15 @@ public class MapSelect : MonoBehaviour
     public bool[] part2 = new bool[6];
     private void Start()
     {
-        part1= GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsOne;
-        part2= GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsTwo;
+        part1 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsOne;
+        part2 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsTwo;
+        StartCoroutine(up());
+    }
+    IEnumerator up()
+    {
+        yield return new WaitForSeconds(1);
+        part1 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsOne;
+        part2 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsTwo;
     }
     public void RunLvl(int number)
     {

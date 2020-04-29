@@ -27,6 +27,8 @@ TagManager:
   - Map
   - BigMap
   - WizardStore
+  - Right
+  - Left
   layers:
   - Default
   - TransparentFX

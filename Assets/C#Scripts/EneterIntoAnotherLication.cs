@@ -58,6 +58,11 @@ public class EneterIntoAnotherLication : MonoBehaviour
     }
     IEnumerator MYLVL(int numb)
     {
+        ForSavesVar.coin = Player.coin;
+        ForSavesVar.iron = Player.Iron;
+        ForSavesVar.wood = Player.Wood;
+        ForSavesVar.rock = Player.Stone;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().SaveMyData();
         Dead.SetActive(true);
         yield return new WaitForSeconds(2);
         Application.LoadLevel(numb);
