@@ -15,7 +15,7 @@ public class MapSelect : MonoBehaviour
     }
     IEnumerator up()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         part1 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsOne;
         part2 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsTwo;
     }

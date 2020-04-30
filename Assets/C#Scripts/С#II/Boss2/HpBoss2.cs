@@ -46,7 +46,7 @@ public class HpBoss2 : MonoBehaviour
             else
             {
                 int RandomVar;
-                RandomVar = Random.Range(100, 200);
+                RandomVar = Random.Range(100,300);
                 for (int i=0;i< RandomVar; i += 1)
                 {
                     Instantiate(Coin, transform.position, Quaternion.identity);
