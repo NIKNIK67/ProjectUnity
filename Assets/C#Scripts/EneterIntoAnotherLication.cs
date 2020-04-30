@@ -21,7 +21,7 @@ public class EneterIntoAnotherLication : MonoBehaviour
     {
         if (MayUse)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 if( this.tag == "Map")
                 {
@@ -62,6 +62,7 @@ public class EneterIntoAnotherLication : MonoBehaviour
         ForSavesVar.iron = Player.Iron;
         ForSavesVar.wood = Player.Wood;
         ForSavesVar.rock = Player.Stone;
+        ForSavesVar.Damage = Player.DefaultDamage;
         GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().SaveMyData();
         Dead.SetActive(true);
         yield return new WaitForSeconds(2);

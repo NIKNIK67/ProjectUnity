@@ -47,6 +47,7 @@ public class First : MonoBehaviour
     {
         Vhod.SetActive(true);
         s = this.gameObject.GetComponent<ForSaves>().MyData;
+        DefaultDamage = s.Damage;
         Iron = s.iron;
         Wood = s.wood;
         Stone = s.rock;
@@ -100,7 +101,7 @@ public class First : MonoBehaviour
         {
             HpMinusReload -= Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.Q) && AtackReload < 0 && UsingLadder != 1)
+        if (Input.GetKey(KeyCode.Mouse0) && AtackReload < 0 && UsingLadder != 1)
         {
             AtackReload = 0.3f;
             
@@ -143,7 +144,7 @@ public class First : MonoBehaviour
            
 
         }
-        if (Input.GetKey(KeyCode.E) && T <= 0 && SlashReload < 0 && !IsUp)
+        if (Input.GetKey(KeyCode.LeftShift) && T <= 0 && SlashReload < 0 && !IsUp)
         {
             UsingLadder = 0;
             rb.velocity = Vector2.zero;

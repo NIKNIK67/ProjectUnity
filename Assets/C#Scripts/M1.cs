@@ -20,7 +20,7 @@ public class M1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.R) && checker)
+        if (Input.GetKey(KeyCode.Q) && checker)
         {
             transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y + 15, -15);
             Slash.x = (transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
@@ -28,7 +28,7 @@ public class M1 : MonoBehaviour
             difference = Slash;
             R.ShowTR(transform.position, new Vector2(-difference.normalized.x, difference.normalized.y) * 40);
         }
-        else if (Input.GetKeyUp(KeyCode.R) || !checker)
+        else if (Input.GetKeyUp(KeyCode.Q) || !checker)
         {
             if (checker)
             {
