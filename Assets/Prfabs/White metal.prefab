@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3532605159326655779}
   - component: {fileID: 5645064756923061231}
-  - component: {fileID: 6914788600237878344}
-  m_Layer: 0
+  - component: {fileID: 2034186550012334882}
+  - component: {fileID: 335913372524700815}
+  m_Layer: 15
   m_Name: White metal
   m_TagString: Iron
   m_Icon: {fileID: 0}
@@ -82,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6914788600237878344
-BoxCollider2D:
+--- !u!60 &2034186550012334882
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,6 +106,38 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 2}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.2990398, y: 0.20632172}
+      - {x: -1.3083916, y: -0.19801521}
+      - {x: -1.5027733, y: -0.19797707}
+      - {x: -1.5077629, y: -0.8029194}
+      - {x: 1.5087185, y: -0.8025627}
+      - {x: 1.4965534, y: -0.19853783}
+      - {x: 1.2986183, y: -0.19706154}
+      - {x: 1.2996006, y: 0.19758606}
+      - {x: 1.0988827, y: 0.2007904}
+      - {x: 1.1035614, y: 0.40104675}
+      - {x: -1.1051521, y: 0.4019699}
+      - {x: -1.1007805, y: 0.2065239}
+--- !u!50 &335913372524700815
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968155603969105133}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

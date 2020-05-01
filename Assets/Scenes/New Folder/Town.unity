@@ -3116,12 +3116,12 @@ PrefabInstance:
     - target: {fileID: 5008089360282538714, guid: bdaf1056a17f72947825c690cda07de5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5008089360686515080, guid: bdaf1056a17f72947825c690cda07de5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5008089360686515095, guid: bdaf1056a17f72947825c690cda07de5,
         type: 3}

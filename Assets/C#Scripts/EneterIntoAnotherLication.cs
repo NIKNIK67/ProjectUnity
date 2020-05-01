@@ -11,6 +11,8 @@ public class EneterIntoAnotherLication : MonoBehaviour
     First Player;
     GameObject Dead;
     public GameObject MapCanvas;
+    public int NumberOfLvlToUnlock=0;
+    public int Part = 0; 
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
@@ -63,10 +65,14 @@ public class EneterIntoAnotherLication : MonoBehaviour
         ForSavesVar.wood = Player.Wood;
         ForSavesVar.rock = Player.Stone;
         ForSavesVar.Damage = Player.DefaultDamage;
+        if (SceneManager.GetActiveScene().buildIndex > 2 && SceneManager.GetActiveScene().buildIndex < 9)
+        {
+            ForSavesVar.levelsOne[SceneManager.GetActiveScene().buildIndex-2]=true;
+        }
         GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().SaveMyData();
         Dead.SetActive(true);
         yield return new WaitForSeconds(2);
-        Application.LoadLevel(numb);
+        SceneManager.LoadScene(numb);
     }
        
 }

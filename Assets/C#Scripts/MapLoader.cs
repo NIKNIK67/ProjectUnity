@@ -15,6 +15,7 @@ public class MapLoader : MonoBehaviour
     {
         part1 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsOne;
         part2 = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData.levelsTwo;
+        part1[0] = true;
         StartCoroutine(up());
         for (int i = 0; i < 5; i++)
         {

@@ -20,7 +20,7 @@ public class Sword : MonoBehaviour
         {
             AtackReload -= Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.Q) && AtackReload < 0  && a.UsingLadder!=1)
+        if (Input.GetKey(KeyCode.Mouse0) && AtackReload < 0  && a.UsingLadder!=1)
         {
             AtackReload = 0.3f;
             anim.SetInteger("A", Random.Range(1,4));
