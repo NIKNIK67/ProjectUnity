@@ -95,6 +95,7 @@
     <Compile Include="Assets\C#Scripts\Sword.cs" />
     <Compile Include="Assets\C#Scripts\Trail1LVLs.cs" />
     <Compile Include="Assets\C#Scripts\koval.cs" />
+    <Compile Include="Assets\C#Scripts\stall\SmallShop.cs" />
     <Compile Include="Assets\C#Scripts\teleport.cs" />
     <Compile Include="Assets\C#Scripts\triggerToBuy.cs" />
     <Compile Include="Assets\C#Scripts\С#II\Boss2\Boss.cs" />

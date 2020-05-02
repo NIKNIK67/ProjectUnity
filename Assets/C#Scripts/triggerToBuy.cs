@@ -22,6 +22,7 @@ public class triggerToBuy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Invoke("u", 0.05f);
     }
     void Update()
     {
@@ -58,6 +59,13 @@ public class triggerToBuy : MonoBehaviour
         PlayerWood = AllData.Wood;
         PlayerStone = AllData.Stone;
         PlayerIron = AllData.Iron;
+    }
+    void u()
+    {
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Items>().Skils[Number])
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

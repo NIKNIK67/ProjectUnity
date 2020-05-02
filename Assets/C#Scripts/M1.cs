@@ -11,6 +11,7 @@ public class M1 : MonoBehaviour
     public LineM1 R;
     float rotZ = 0;
     bool checker = true;
+    public GameObject line;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,6 +33,7 @@ public class M1 : MonoBehaviour
         {
             if (checker)
             {
+                Destroy(line);
                 Invoke("Ds", 4);
                 rb.gravityScale = 3;
                 rb.AddForce(new Vector2(-difference.normalized.x, difference.normalized.y) * 70, ForceMode2D.Impulse);

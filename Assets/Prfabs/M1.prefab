@@ -284,6 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difference: {x: 0, y: 0, z: 0}
   R: {fileID: 5444711024969227432}
+  line: {fileID: 5444711024969227434}
 --- !u!50 &5444711024852176759
 Rigidbody2D:
   serializedVersion: 4

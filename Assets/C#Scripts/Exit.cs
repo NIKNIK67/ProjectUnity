@@ -65,6 +65,7 @@ public class Exit : MonoBehaviour
         ForSavesVar.wood = Player.Wood;
         ForSavesVar.rock = Player.Stone;
         ForSavesVar.Damage = Player.DefaultDamage;
+        ForSavesVar.ActiveSkills = Player.ActiveSkills;
         if (SceneManager.GetActiveScene().buildIndex > 2 && SceneManager.GetActiveScene().buildIndex < 9)
         {
             ForSavesVar.levelsOne[SceneManager.GetActiveScene().buildIndex - 2] = true;

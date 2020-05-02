@@ -43,6 +43,9 @@ public class First : MonoBehaviour
     public float[] DamageModify = { 1, 1, 1 };
     public GameObject Dead;
     public GameObject Vhod;
+    public bool[] ActiveSkills;
+    public GameObject[] Magic;
+    bool[] MgicsReloads = new bool[2] {true, true};
     void Start()
     {
         Vhod.SetActive(true);
@@ -52,16 +55,30 @@ public class First : MonoBehaviour
         Wood = s.wood;
         Stone = s.rock;
         coin = s.coin;
+        ActiveSkills = s.ActiveSkills;
         saves = gameObject.GetComponent<ForSaves>();
         rb = GetComponent<Rigidbody2D> ();
         anim = GetComponent<Animator>();
         Damage = DefaultDamage * DamageModify[2];
+        Invoke("u", 0.1f);
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q) && MgicsReloads[0] && ActiveSkills[0]) 
+        {
+            Instantiate(Magic[0], transform.position, Quaternion.identity);
+            MgicsReloads[0] = false;
+            StartCoroutine(M1E());
+        }
+        if (Input.GetKeyDown(KeyCode.E) && MgicsReloads[1] && ActiveSkills[1])
+        {
+            Instantiate(Magic[1], transform.position, Quaternion.identity);
+            MgicsReloads[1] = false;
+            StartCoroutine(M2E());
+        }
         if (UsingLadder == 0)
         {
             Sword.SetActive(true);
@@ -320,7 +337,16 @@ public class First : MonoBehaviour
         Time.timeScale = 1;
         ispause = false;
     }
-
+    void u()
+    {
+        s = this.gameObject.GetComponent<ForSaves>().MyData;
+        DefaultDamage = s.Damage;
+        Iron = s.iron;
+        Wood = s.wood;
+        Stone = s.rock;
+        coin = s.coin;
+        ActiveSkills = s.ActiveSkills;
+    }
     IEnumerator MYLVL(int numb)
     {
         Dead.SetActive(true);
@@ -328,6 +354,27 @@ public class First : MonoBehaviour
         
         Destroy(gameObject);
         Application.LoadLevel(numb);
+    }
+
+    IEnumerator  M1E()
+    {
+        while (Input.GetKey(KeyCode.Q))
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSeconds(3);
+        MgicsReloads[0] = true;
+        
+    }
+    IEnumerator M2E()
+    {
+        while (Input.GetKey(KeyCode.E))
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSeconds(5);
+        MgicsReloads[1] = true;
+
     }
     //void FixUpdate(){
     //	rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 12f, rb.velocity.y);
