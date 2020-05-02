@@ -242,22 +242,7 @@ public class First : MonoBehaviour
         {
             this.transform.parent = col.transform;
         }
-        if (col.gameObject.tag == "Wood")
-        {
-            Wood += 1;
-            
-            Destroy(col.gameObject);
-        }
-        if (col.gameObject.tag == "Iron")
-        {
-            Iron += 1;
-            Destroy(col.gameObject);
-        }
-        if (col.gameObject.tag == "Stone")
-        {
-            Stone += 1;
-            Destroy(col.gameObject);
-        }
+       
 
     }
     private void OnCollisionExit2D(Collision2D col)
@@ -272,6 +257,22 @@ public class First : MonoBehaviour
         if (col.gameObject.tag == "Coin")
         {
             coin += 1;
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Wood")
+        {
+            Wood += 1;
+
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Iron")
+        {
+            Iron += 1;
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Stone")
+        {
+            Stone += 1;
             Destroy(col.gameObject);
         }
     }

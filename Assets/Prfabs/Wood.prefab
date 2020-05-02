@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3058758969460251209}
   - component: {fileID: 8660351138230931434}
   - component: {fileID: 2128409929094008605}
-  - component: {fileID: 4406423466333368471}
-  m_Layer: 15
+  - component: {fileID: 3936393376586470828}
+  - component: {fileID: 2961873332886292324}
+  m_Layer: 8
   m_Name: Wood
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -29,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.838974, y: 78.8, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6362114220115612341}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,8 +106,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &4406423466333368471
-PolygonCollider2D:
+--- !u!114 &3936393376586470828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100979266874662849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db40f774aca4184e98c2439989ed28c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &2961873332886292324
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -114,10 +128,10 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.12275469}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,29 +141,63 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.005909, y: 0.0009651184}
-      - {x: 1.0029368, y: 0.19944382}
-      - {x: 0.60459375, y: 0.20266724}
-      - {x: 0.60168743, y: 0.80012894}
-      - {x: 0.4033556, y: 0.80421066}
-      - {x: 0.39999998, y: 1.02}
-      - {x: -0.4198079, y: 1.0050697}
-      - {x: -0.41756964, y: 0.80659866}
-      - {x: -0.6042447, y: 0.8110199}
-      - {x: -0.60513735, y: 0.20716095}
-      - {x: -1.0101957, y: 0.2063713}
-      - {x: -1.0125127, y: 0.003692627}
-      - {x: -1.22, y: 0}
-      - {x: -1.2050471, y: -0.8034477}
-      - {x: -0.99714136, y: -0.80153275}
-      - {x: -0.9984937, y: -1.0017242}
-      - {x: -0.19387245, y: -1.0003204}
-      - {x: -0.20231342, y: -0.804512}
-      - {x: 0.19088268, y: -0.8035698}
-      - {x: 0.19370079, y: -0.99422455}
-      - {x: 1.0025673, y: -1.0022697}
-      - {x: 1.007091, y: -0.804821}
-      - {x: 1.2032223, y: -0.80644226}
-      - {x: 1.2021289, y: 0.0005645752}
+  serializedVersion: 2
+  m_Size: {x: 2.8, y: 2.1544907}
+  m_EdgeRadius: 0
+--- !u!1 &8234947868436858435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6362114220115612341}
+  - component: {fileID: 7326391658588129254}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Wood
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6362114220115612341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8234947868436858435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3058758969460251209}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7326391658588129254
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8234947868436858435}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.008974075, y: -0.017951965}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.166606, y: 1.8257904}
+  m_EdgeRadius: 0
