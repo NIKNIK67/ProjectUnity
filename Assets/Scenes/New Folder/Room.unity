@@ -1432,6 +1432,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1849,6 +1854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopBacground (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
@@ -2995,7 +3005,7 @@ GameObject:
   - component: {fileID: 490692382}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3402,6 +3412,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3692,6 +3707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3842,6 +3862,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3911,6 +3936,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3979,6 +4009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopBacground (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
@@ -5430,7 +5465,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &796797079
 GameObject:
@@ -6592,7 +6627,7 @@ GameObject:
   - component: {fileID: 960558411}
   m_Layer: 0
   m_Name: GameObject (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6929,6 +6964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopBacground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
@@ -8388,7 +8428,7 @@ PrefabInstance:
     - target: {fileID: 5008089360282538713, guid: bdaf1056a17f72947825c690cda07de5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5008089360282538713, guid: bdaf1056a17f72947825c690cda07de5,
         type: 3}
@@ -8596,6 +8636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopBacground (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
@@ -11851,6 +11896,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12048,6 +12098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12198,6 +12253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopBacground (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12272,6 +12332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopBacground (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
@@ -12846,6 +12911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopBacground (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}
@@ -13866,6 +13936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopBacground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000127547738328239, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
         type: 3}

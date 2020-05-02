@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/New Folder/WizarsDhopScene.unity
+- path: Assets/Scenes/New Folder/1 trail/LVL 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

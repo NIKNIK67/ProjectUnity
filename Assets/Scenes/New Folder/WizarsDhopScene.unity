@@ -10763,7 +10763,7 @@ GameObject:
   - component: {fileID: 632174390}
   m_Layer: 0
   m_Name: flor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18497,10 +18497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumperOfLocation: 1
-  MapCanvas: {fileID: 0}
-  NumberOfLvlToUnlock: 0
-  Part: 1
 --- !u!1 &1076405028
 GameObject:
   m_ObjectHideFlags: 0

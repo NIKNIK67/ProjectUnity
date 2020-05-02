@@ -79,6 +79,8 @@
     <Compile Include="Assets\C#Scripts\LineM1.cs" />
     <Compile Include="Assets\C#Scripts\M1.cs" />
     <Compile Include="Assets\C#Scripts\M1M.cs" />
+    <Compile Include="Assets\C#Scripts\M2\M1Bottle.cs" />
+    <Compile Include="Assets\C#Scripts\M2\M1Bottle2.cs" />
     <Compile Include="Assets\C#Scripts\MapLoader.cs" />
     <Compile Include="Assets\C#Scripts\MapSelect.cs" />
     <Compile Include="Assets\C#Scripts\Menu.cs" />
