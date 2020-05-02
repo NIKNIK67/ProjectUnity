@@ -1285,11 +1285,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 191138792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e5e48714a7a892408d5b245b363d8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NumperOfLocation: 0
   MapCanvas: {fileID: 2010256917}
+  NumberOfLvlToUnlock: 0
+  Part: 0
 --- !u!1 &201864884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,8 +4480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumperOfLocation: 0
-  MapCanvas: {fileID: 2010256917}
 --- !u!4 &686364864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7625043457576383901, guid: 8531ffcdcfdf3db4f87d05cccc91ea73,
@@ -9689,11 +9689,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1530331506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e5e48714a7a892408d5b245b363d8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NumperOfLocation: 1
   MapCanvas: {fileID: 0}
+  NumberOfLvlToUnlock: 0
+  Part: 0
 --- !u!1 &1532444873
 GameObject:
   m_ObjectHideFlags: 0

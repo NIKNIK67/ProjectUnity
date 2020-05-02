@@ -4206,11 +4206,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1256541032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e5e48714a7a892408d5b245b363d8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NumperOfLocation: 9
   MapCanvas: {fileID: 0}
+  NumberOfLvlToUnlock: 0
+  Part: 0
 --- !u!1 &1291916073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8644049400118784924, guid: 4640bb326762c8546aab97bd348dc788,
@@ -7154,7 +7156,6 @@ MonoBehaviour:
   text: {fileID: 1098963507}
   text2: {fileID: 113566960}
   price: 0
-  MapCanvas: {fileID: 0}
 --- !u!61 &2065837477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7299,11 +7300,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2108797781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79fd585c8135a58459b7277e1af2e065, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e5e48714a7a892408d5b245b363d8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NumperOfLocation: 2
   MapCanvas: {fileID: 0}
+  NumberOfLvlToUnlock: 0
+  Part: 0
 --- !u!1 &2123657590
 GameObject:
   m_ObjectHideFlags: 0

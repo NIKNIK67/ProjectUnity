@@ -20,6 +20,10 @@ public class NewBehaviourScript : MonoBehaviour
         {
             i = 0.5f; 
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            i = -3f;
+        }
         if (i>0 && pl.rotationalOffset != 180f)
         {
             i -= Time.deltaTime;

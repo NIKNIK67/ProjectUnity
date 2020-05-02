@@ -5,6 +5,7 @@ using UnityEngine;
 public class GorilaII : MonoBehaviour
 {
     First Damage;
+    public GameObject Coin;
     public float HP = 10;
     public GameObject dead;
     public GameObject pl;
@@ -96,6 +97,12 @@ public class GorilaII : MonoBehaviour
             }
             else
             {
+                int RandomVar;
+                RandomVar = Random.Range(15, 20);
+                for (int i = 0; i < RandomVar; i += 1)
+                {
+                    Instantiate(Coin, transform.position, Quaternion.identity);
+                }
                 Instantiate(dead, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }

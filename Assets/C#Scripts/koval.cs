@@ -12,14 +12,11 @@ public class koval : MonoBehaviour
     data ForSavesVar;
     First Player;
     GameObject Dead;
-    public GameObject MapCanvas;
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
         Dead = Player.Dead;
         ForSavesVar = GameObject.FindGameObjectWithTag("Player").GetComponent<ForSaves>().MyData;
-        text.UpdateData();
-        text2.UpdateData();
     }
     void Update()
     {
@@ -31,9 +28,9 @@ public class koval : MonoBehaviour
             {
                 if (Player.DefaultDamage != 2)
                 {
-                    if ((Player.DefaultDamage - 1f) * 200 <= Player.coin)
+                    if (((Player.DefaultDamage - 0.9f) * 200)-0.01 <= Player.coin)
                     {
-                        print((Player.DefaultDamage - 1f) * 20);
+                        print((Player.DefaultDamage - 1f) * 200);
                         Player.DefaultDamage += 0.1f;
                         text.UpdateData();
                         text2.UpdateData();
@@ -44,6 +41,10 @@ public class koval : MonoBehaviour
                             Player.coin -= 20;
                         }
                     }
+                    else
+                    {
+                        print((Player.DefaultDamage - 0.9f) * 200);
+                    }
                 }
             }
         }
@@ -52,8 +53,6 @@ public class koval : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            text.UpdateData();
-            text2.UpdateData();
             MayUse = true;
         }
 
