@@ -150,7 +150,7 @@ public class GorilaII : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 0);
             if (transform.position.x> WherwToAtack)
             {
-                t = 5;
+                t = 2;
                 Atacking = false;
             }
         }
@@ -160,7 +160,7 @@ public class GorilaII : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 180);
             if (transform.position.x < WherwToAtack)
             {
-                t = 5;
+                t = 2;
                 Atacking = false;
             }
         }

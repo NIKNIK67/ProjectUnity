@@ -36,8 +36,8 @@ public class M1Bottle2 : MonoBehaviour
             if (checker)
             {
                 Destroy(line);
-                rb.gravityScale = 3;
-                rb.AddForce(new Vector2(-difference.normalized.x, difference.normalized.y) * 70, ForceMode2D.Impulse);
+                rb.gravityScale = 6;
+                rb.AddForce(new Vector2(-difference.normalized.x, difference.normalized.y) * 140, ForceMode2D.Impulse);
             }
             checker = false;
         }

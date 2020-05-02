@@ -35,8 +35,8 @@ public class M1 : MonoBehaviour
             {
                 Destroy(line);
                 Invoke("Ds", 4);
-                rb.gravityScale = 3;
-                rb.AddForce(new Vector2(-difference.normalized.x, difference.normalized.y) * 70, ForceMode2D.Impulse);
+                rb.gravityScale = 6;
+                rb.AddForce(new Vector2(-difference.normalized.x, difference.normalized.y) * 140, ForceMode2D.Impulse);
             }
             checker = false;
         }
