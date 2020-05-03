@@ -5,6 +5,8 @@ using UnityEngine;
 public class Helicopter : MonoBehaviour
 {
     First Damage;
+    public GameObject[] Materials;
+    public GameObject Coin;
     public float HP = 8;
     public GameObject pl;
     public GameObject BilletPref;
@@ -162,6 +164,18 @@ public class Helicopter : MonoBehaviour
             }
             else
             {
+                int RandomVar;
+                RandomVar = Random.Range(20, 30);
+                for (int i = 0; i < RandomVar; i += 1)
+                {
+                    Instantiate(Coin, transform.position, Quaternion.identity);
+                }
+                int RandomVar2;
+                RandomVar2 = Random.Range(3, 5);
+                for (int i = 0; i < RandomVar2; i += 1)
+                {
+                    Instantiate(Materials[Random.Range(0,3)], transform.position, Quaternion.identity);
+                }
                 Destroy(gameObject);
             }
         }

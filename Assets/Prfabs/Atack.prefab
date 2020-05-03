@@ -182,6 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cabb47d898223479efeb58c6a3031b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Materials:
+  - {fileID: 3754652551580143316, guid: 01012c3a697d4ac4f88f340c199cdbe8, type: 3}
+  - {fileID: 2100979266874662849, guid: 030f8eff15ed0594098c4742816bf8fa, type: 3}
+  - {fileID: 5968155603969105133, guid: e5b772a86c22a1f488921e1bb930724f, type: 3}
   Coin: {fileID: 7684637835908647764, guid: 5620c184eb94eec40a60469212d574f8, type: 3}
   HP: 15
   dead: {fileID: 4365871464311709004, guid: a7232348d5191504da17dd5c7387990f, type: 3}
