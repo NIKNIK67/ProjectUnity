@@ -22,11 +22,11 @@ public class triggerToBuy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Invoke("u", 0.05f);
+        Invoke("u", 0.01f);
     }
     void Update()
     {
-        if(MayIBuyIt && Input.GetKeyDown(KeyCode.F))
+        if(MayIBuyIt && Input.GetKeyDown(KeyCode.R))
         {
             UpdateDataAboutMAterials();
             if(PriceWood <= PlayerWood && PriceStone <= PlayerStone && PriceIron <= PlayerIron)

@@ -373,7 +373,7 @@ public class First : MonoBehaviour
         Dead.SetActive(true);
         yield return new WaitForSeconds(2);
         
-        Destroy(gameObject);
+      
         Application.LoadLevel(numb);
     }
 

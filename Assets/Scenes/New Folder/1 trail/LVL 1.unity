@@ -27020,6 +27020,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4265177434119744819, guid: 2d86bcf8b54959c448746d3a069bcbd1,
+        type: 3}
+      propertyPath: Music
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ffefd5e9651ac943b984f7afc7b3883, type: 3}
     - target: {fileID: 8788644449562297468, guid: 2d86bcf8b54959c448746d3a069bcbd1,
         type: 3}
       propertyPath: max_x

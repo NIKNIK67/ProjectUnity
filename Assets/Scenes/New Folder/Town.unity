@@ -1278,6 +1278,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2593005792248988417, guid: 265a8392e0f7aa44284cbd2bcdd54746,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1752860413}
+    - target: {fileID: 2593005792248988417, guid: 265a8392e0f7aa44284cbd2bcdd54746,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
     - target: {fileID: 2593005793848535475, guid: 265a8392e0f7aa44284cbd2bcdd54746,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
