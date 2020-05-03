@@ -31,6 +31,7 @@ public class SmallShop : MonoBehaviour
                         Player.ActiveSkills[0] = true;
                         Player.coin -= price[0];
                         UpdateData();
+                        Player.Buysome();
                     }
                 }
                 else if (!Player.ActiveSkills[1])
@@ -40,6 +41,7 @@ public class SmallShop : MonoBehaviour
                         Player.ActiveSkills[1] = true;
                         Player.coin -= price[1];
                         UpdateData();
+                        Player.Buysome();
                     }
                 }
             }

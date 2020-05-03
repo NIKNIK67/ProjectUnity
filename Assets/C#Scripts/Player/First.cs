@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class First : MonoBehaviour
 {
@@ -46,6 +48,13 @@ public class First : MonoBehaviour
     public bool[] ActiveSkills;
     public GameObject[] Magic;
     bool[] MgicsReloads = new bool[2] {true, true};
+    public GameObject SSS1; 
+    public Image sk1;
+    TextMeshProUGUI numbs;
+    public GameObject SSS2;
+    public Image sk2;
+    public TextMeshProUGUI numbs2;
+    public GameObject[] Skills;
     void Start()
     {
         Vhod.SetActive(true);
@@ -61,7 +70,18 @@ public class First : MonoBehaviour
         anim = GetComponent<Animator>();
         Damage = DefaultDamage * DamageModify[2];
         Invoke("u", 0.1f);
-        
+        sk1.color = new Color(125f, 125f, 125f, 1f);
+        numbs = SSS1.GetComponent<TextMeshProUGUI>();
+        numbs2 = SSS2.GetComponent<TextMeshProUGUI>();
+        if (ActiveSkills[0])
+        {
+            Skills[0].SetActive(true);
+        }
+        if (ActiveSkills[1])
+        {
+            Skills[1].SetActive(true);
+        }
+
     }
 
     // Update is called once per frame
@@ -359,23 +379,50 @@ public class First : MonoBehaviour
 
     IEnumerator  M1E()
     {
+        sk1.color = new Color(0.5f, 0.5f, 0.5f, 1f);
         while (Input.GetKey(KeyCode.Q))
         {
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSeconds(3);
+        SSS1.SetActive(true);
+        for (int i =3; i>0; i--)
+        {
+            numbs.text = i.ToString();
+            yield return new WaitForSeconds(1);
+        }
+        sk1.color = new Color(1f, 1, 1f, 1f);
+        SSS1.SetActive(false);
         MgicsReloads[0] = true;
         
     }
     IEnumerator M2E()
     {
+        sk2.color = new Color(0.5f, 0.5f, 0.5f, 1f);
         while (Input.GetKey(KeyCode.E))
         {
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSeconds(5);
+        SSS2.SetActive(true);
+        for (int i = 5; i > 0; i--)
+        {
+            numbs2.text = i.ToString();
+            yield return new WaitForSeconds(1);
+        }
+        sk2.color = new Color(1f, 1f, 1f, 1f);
+        SSS2.SetActive(false);
         MgicsReloads[1] = true;
 
+    }
+    public void Buysome()
+    {
+        if (ActiveSkills[0])
+        {
+            Skills[0].SetActive(true);
+        }
+        if (ActiveSkills[1])
+        {
+            Skills[1].SetActive(true);
+        }
     }
     //void FixUpdate(){
     //	rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 12f, rb.velocity.y);
