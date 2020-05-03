@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5444711023717887299}
   m_Layer: 12
   m_Name: M!_0
-  m_TagString: HPPrefab
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 5444711024852176759}
   m_Layer: 12
   m_Name: M1
-  m_TagString: HPPrefab
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

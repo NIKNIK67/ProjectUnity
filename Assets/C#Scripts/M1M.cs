@@ -30,6 +30,7 @@ public class M1M : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Q) || !checker)
         {
+            tag = "HPPrefab";
             rotZ = Mathf.Atan2(parentrb.velocity.x, -parentrb.velocity.y) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(rotZ-90, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 50);
