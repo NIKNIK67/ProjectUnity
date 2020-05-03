@@ -57,7 +57,14 @@ public class GorilaII : MonoBehaviour
         {
             if (IsGoLeft == false)
             {
-                anim.SetInteger("M", 0);
+                if (MayAtack)
+                {
+                    anim.SetInteger("M", 2);
+                }
+                else
+                {
+                    anim.SetInteger("M", 0);
+                }
                 transform.Translate(direction * speed * Time.deltaTime);
                 transform.eulerAngles = new Vector2(0, 0);
                 if (transform.position.x > maxX)
@@ -68,7 +75,14 @@ public class GorilaII : MonoBehaviour
             }
             else
             {
-                anim.SetInteger("M", 0);
+                if (MayAtack)
+                {
+                    anim.SetInteger("M", 2);
+                }
+                else
+                {
+                    anim.SetInteger("M", 0);
+                }
                 transform.Translate(direction * speed * Time.deltaTime);
                 transform.eulerAngles = new Vector2(0, 180.0f);
                 if (transform.position.x < minX)
@@ -80,13 +94,28 @@ public class GorilaII : MonoBehaviour
         }
         else
         {
-            anim.SetInteger("M", 1);
+            if (MayAtack)
+            {
+                anim.SetInteger("M", 2);
+            }
+            else
+            {
+                anim.SetInteger("M", 1);
+            }
             t -= Time.deltaTime;
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
 
+        if (collision.CompareTag("Player") && !Atacking)
+        {
+            MayAtack = true;
+            if (!Atacking)
+            {
+                StartAtack();
+            }
+        }
         if (collision.CompareTag("HPPrefab"))
         {
             sr.color = Color.red;
@@ -118,14 +147,6 @@ public class GorilaII : MonoBehaviour
     void BecomeWhite()
     {
         sr.color = Color.white;
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && !Atacking)
-        {
-            MayAtack = true;
-            StartAtack();
-        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

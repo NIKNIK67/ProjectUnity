@@ -185,7 +185,7 @@ public class First : MonoBehaviour
         {
             UsingLadder = 0;
             rb.velocity = Vector2.zero;
-            SlashReload = 1;
+            SlashReload = 1.2f;
             Slash.x = -(transform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
             Slash.y = -(transform.position.y - Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
             T = 0.4f;
