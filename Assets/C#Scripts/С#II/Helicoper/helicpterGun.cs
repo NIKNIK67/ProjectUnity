@@ -17,7 +17,7 @@ public class helicpterGun : MonoBehaviour
     public float t;
     void Start()
     {
-      
+        pl = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -51,10 +51,15 @@ public class helicpterGun : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -1);
         }
+    }
+    private void FixedUpdate()
+    {
         Vector3 difference = pl.transform.position - transform.position;
         rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
         Quaternion rotation = Quaternion.AngleAxis(rotZ + rotationOffset, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * speedRotate);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speedRotate);
+
     }
+
 }
