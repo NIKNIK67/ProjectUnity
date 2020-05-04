@@ -7092,6 +7092,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 2593005792089843015, guid: 265a8392e0f7aa44284cbd2bcdd54746,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2593005792089843035, guid: 265a8392e0f7aa44284cbd2bcdd54746,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12774,6 +12779,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &764685889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2593005792089843015, guid: 265a8392e0f7aa44284cbd2bcdd54746,
+    type: 3}
+  m_PrefabInstance: {fileID: 385308080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &765590990
 GameObject:
   m_ObjectHideFlags: 0
@@ -33189,6 +33200,11 @@ PrefabInstance:
       propertyPath: SSS2
       value: 
       objectReference: {fileID: 780749510}
+    - target: {fileID: 2986610501796832158, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf,
+        type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 764685889}
     - target: {fileID: 4954187197761642136, guid: 117fc4bf4a2dd914fac8d06fa1e1ceaf,
         type: 3}
       propertyPath: MyData.levelsTwo.Array.data[0]

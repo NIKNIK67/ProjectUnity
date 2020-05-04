@@ -48,7 +48,7 @@ public class Chest : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         for (int i = 0; i < 12; i++)
         {
-            Instantiate(Materials[Random.Range(0, 3)], new Vector3(transform.position.x, transform.position.y, -49), Quaternion.identity);
+            Instantiate(Materials[Random.Range(0, 3)], new Vector3(transform.position.x, transform.position.y, transform.position.z+1), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
 
         }
