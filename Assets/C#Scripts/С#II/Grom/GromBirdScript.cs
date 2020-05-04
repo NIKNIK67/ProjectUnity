@@ -13,10 +13,12 @@ public class GromBirdScript : MonoBehaviour
     public Vector2 p4;
     SpriteRenderer sr;
     int Position;
+    GameObject Player;
     Vector2[] positions  =new Vector2[4];
     void Start()
     {
         Damage = GameObject.FindGameObjectWithTag("Player").GetComponent<First>();
+        Player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(NewPositon());
         sr = GetComponent<SpriteRenderer>();
         positions[0] = p1;
@@ -35,7 +37,10 @@ public class GromBirdScript : MonoBehaviour
         {
             yield return new WaitForSeconds(7);
             Position = Random.Range(0, 4);
-            Invoke("CreateBullet", 1f);
+            if (Vector2.Distance(transform.position, Player.transform.position) < 300)
+            {
+                Invoke("CreateBullet", 1f);
+            }
         }
     }
     void CreateBullet()

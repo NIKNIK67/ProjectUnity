@@ -10,6 +10,8 @@ public class GorillaBossScrit : MonoBehaviour
     public float T = 10;
     int relax = 0;
     bool isWindCreated = false;
+    public GameObject Portal;
+    public GameObject Coin;
     public GameObject Pushka;
     public GameObject Wawe3L;
     public GameObject Wawe3R;
@@ -229,6 +231,17 @@ public class GorillaBossScrit : MonoBehaviour
             if (HP > 0)
             {
                 rb.AddForce(transform.up * 300, ForceMode2D.Impulse);
+            }
+            else
+            {
+                int RandomVar;
+                RandomVar = Random.Range(100, 300);
+                for (int i = 0; i < RandomVar; i += 1)
+                {
+                    Instantiate(Coin, transform.position, Quaternion.identity);
+                }
+                Instantiate(Portal, new Vector2(30, -30), Quaternion.identity);
+                Destroy(gameObject);
             }
         }
     }

@@ -73,7 +73,6 @@ public class ENergyBullet : MonoBehaviour
     }
     public void DestroyWithPArticle()
     {
-        Debug.Log("FuckOff");
         Instantiate(ParticleSystem, transform.position, new Quaternion(90,90,90,0));
         Destroy(gameObject);
     }
