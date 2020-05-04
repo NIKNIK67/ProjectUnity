@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\C#Scripts\BackToSpawn.cs" />
+    <Compile Include="Assets\C#Scripts\Chest.cs" />
     <Compile Include="Assets\C#Scripts\CoinRandomDirection.cs" />
     <Compile Include="Assets\C#Scripts\CoinScript.cs" />
     <Compile Include="Assets\C#Scripts\Decription.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Assets\C#Scripts\MenuCamera.cs" />
     <Compile Include="Assets\C#Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\C#Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\C#Scripts\NewBehaviourScript1.cs" />
     <Compile Include="Assets\C#Scripts\Player\First.cs" />
     <Compile Include="Assets\C#Scripts\Player\HitBoxForPlayer.cs" />
     <Compile Include="Assets\C#Scripts\Player\Items.cs" />
