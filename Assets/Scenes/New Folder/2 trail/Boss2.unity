@@ -2201,7 +2201,7 @@ GameObject:
   - component: {fileID: 360709930}
   m_Layer: 0
   m_Name: CurrentCloud_0 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 442747929}
   m_Layer: 0
   m_Name: CurrentCloud_0 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3733,7 +3733,7 @@ GameObject:
   - component: {fileID: 692987333}
   m_Layer: 0
   m_Name: CurrentCloud_0 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4035,7 +4035,7 @@ GameObject:
   - component: {fileID: 819658878}
   m_Layer: 0
   m_Name: CurrentCloud_0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10141,7 +10141,7 @@ GameObject:
   - component: {fileID: 2057096644}
   m_Layer: 0
   m_Name: CurrentCloud_0 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

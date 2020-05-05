@@ -31,6 +31,10 @@ public class Exit : MonoBehaviour
                     {
                         MapCanvas.SetActive(true);
                     }
+                    if (gameObject.GetComponent<MapSelect>().part ==1)
+                    {
+                        MapCanvas.SetActive(true);
+                    }
                 }
                 else
                 {
@@ -66,7 +70,7 @@ public class Exit : MonoBehaviour
         ForSavesVar.rock = Player.Stone;
         ForSavesVar.Damage = Player.DefaultDamage;
         ForSavesVar.ActiveSkills = Player.ActiveSkills;
-        if (SceneManager.GetActiveScene().buildIndex > 2 && SceneManager.GetActiveScene().buildIndex < 9)
+        if (SceneManager.GetActiveScene().buildIndex > 2 && SceneManager.GetActiveScene().buildIndex <7)
         {
             ForSavesVar.levelsOne[SceneManager.GetActiveScene().buildIndex - 2] = true;
         }

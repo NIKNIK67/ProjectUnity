@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de74a42db5b2aa498639b4c168fb894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Kick: {fileID: 8300000, guid: 44f3ec523643f29409f948c33a931543, type: 3}
   HPPrefab: {fileID: 6176713389286275898, guid: 542370aaf65ee2e458e2e02b1f44c686,
     type: 3}
   Shadow: {fileID: 1367138931004907868, guid: f73a750dab3c3be45bbc757279267163, type: 3}
@@ -139,6 +140,7 @@ MonoBehaviour:
   Sword: {fileID: 2986610501822969517}
   isopenBlade: 0
   MapCanvas: {fileID: 0}
+  MapCanvas2: {fileID: 0}
   DashSpeed: 500
   JumpPower: 78
   DefaultDamage: 1
@@ -154,6 +156,12 @@ MonoBehaviour:
   Magic:
   - {fileID: 5444711024852176760, guid: 0edee1973fe87d64cbf099d182cc1711, type: 3}
   - {fileID: 7591753281638786707, guid: 4cac99a4fa086a14b8b32ee2119fcf4e, type: 3}
+  SSS1: {fileID: 0}
+  sk1: {fileID: 0}
+  SSS2: {fileID: 0}
+  sk2: {fileID: 0}
+  numbs2: {fileID: 0}
+  Skills: []
 --- !u!50 &2986610501796832153
 Rigidbody2D:
   serializedVersion: 4

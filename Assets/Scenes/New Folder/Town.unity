@@ -9891,7 +9891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5e48714a7a892408d5b245b363d8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumperOfLocation: 9
+  NumperOfLocation: 7
   MapCanvas: {fileID: 0}
   NumberOfLvlToUnlock: 0
   Part: 0

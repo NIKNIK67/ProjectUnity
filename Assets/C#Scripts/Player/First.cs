@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Audio;
 
 public class First : MonoBehaviour
 {
+    public AudioClip Kick;
     public GameObject HPPrefab;
     public GameObject Shadow;
     public GameObject Shadow2;
@@ -35,6 +37,7 @@ public class First : MonoBehaviour
     public GameObject Sword;
     public bool isopenBlade = false;
     public GameObject MapCanvas = null;
+    public GameObject MapCanvas2 = null;
     public float DashSpeed=500;
     public float JumpPower = 78;
     public float DefaultDamage = 1;
@@ -141,7 +144,7 @@ public class First : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0) && AtackReload < 0 && UsingLadder != 1)
         {
             AtackReload = 0.3f;
-            
+            AudioSource KickSound = gameObject.AddComponent<AudioSource>();
             if (transform.eulerAngles.y == 180)
             {
                 Instantiate(HPPrefab, new Vector3(transform.position.x - 8, transform.position.y, transform.position.z - 1), Quaternion.identity);
@@ -150,7 +153,10 @@ public class First : MonoBehaviour
             {
                 Instantiate(HPPrefab, new Vector3(transform.position.x + 3, transform.position.y, transform.position.z - 1), Quaternion.identity);
             }
-
+            KickSound.clip = Kick;
+            KickSound.Play();
+            StartCoroutine(destroy(KickSound));
+            
         }
         if (rb.velocity.magnitude>2 && UsingLadder != 1)
         {
@@ -424,7 +430,9 @@ public class First : MonoBehaviour
             Skills[1].SetActive(true);
         }
     }
-    //void FixUpdate(){
-    //	rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 12f, rb.velocity.y);
-    //}
+    IEnumerator destroy(AudioSource m)
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(m);
+    }
 }

@@ -24,15 +24,21 @@ EditorBuildSettings:
     path: Assets/Scenes/New Folder/1 trail/LVL 3.unity
     guid: a431ba74a33d26b41bc40b1dff65f6ed
   - enabled: 1
-    path: Assets/Scenes/New Folder/1 trail/LVL 4.unity
-    guid: a842ff20c1cffd14db9db3154cb5cf0c
-  - enabled: 1
-    path: Assets/Scenes/New Folder/1 trail/LVL 5.unity
-    guid: c8ad4a255ab0fa446a62699a9ef5651e
-  - enabled: 1
     path: Assets/Scenes/New Folder/1 trail/BossLvl.unity
     guid: 0000806b5bac5a142b1c93b373d6ff02
   - enabled: 1
     path: Assets/Scenes/New Folder/WizarsDhopScene.unity
     guid: a22caaae3f9afc943b91b5afd5639713
+  - enabled: 1
+    path: Assets/Scenes/New Folder/2 trail/Level1.unity
+    guid: c13beb5407417dd42afcbc5a0722faa1
+  - enabled: 1
+    path: Assets/Scenes/New Folder/2 trail/LVL 2.unity
+    guid: 53940138013c096438caa4a83997201d
+  - enabled: 1
+    path: Assets/Scenes/New Folder/2 trail/LVL 3.unity
+    guid: fbeca92c517562f49898e51fcb2bb86e
+  - enabled: 1
+    path: Assets/Scenes/New Folder/2 trail/Boss2.unity
+    guid: 5801bef4ed80097498a2b70b960bb815
   m_configObjects: {}
