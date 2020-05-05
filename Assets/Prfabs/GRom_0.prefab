@@ -4767,6 +4767,7 @@ GameObject:
   - component: {fileID: 3356298387993523217}
   - component: {fileID: 3356298387993523222}
   - component: {fileID: 3356298387993523223}
+  - component: {fileID: 6555071767283487414}
   m_Layer: 8
   m_Name: GRom_0
   m_TagString: Untagged
@@ -4852,8 +4853,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde4612b3efd7134bb1e2de476254597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coin: {fileID: 7684637835908647764, guid: 5620c184eb94eec40a60469212d574f8, type: 3}
+  Materials:
+  - {fileID: 5968155603969105133, guid: e5b772a86c22a1f488921e1bb930724f, type: 3}
+  - {fileID: 2100979266874662849, guid: 030f8eff15ed0594098c4742816bf8fa, type: 3}
+  - {fileID: 3754652551580143316, guid: 01012c3a697d4ac4f88f340c199cdbe8, type: 3}
   Bullet: {fileID: 6881135894198830613, guid: 13ef6bffb6f409c4294061532fc03350, type: 3}
-  HP: 12
+  HP: 30
   p1: {x: 12.5, y: 38.5}
   p2: {x: 60.3, y: 38.5}
   p3: {x: 40.5, y: 27.1}
@@ -4903,3 +4909,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &6555071767283487414
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356298387993523218}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

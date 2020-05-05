@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GromBirdScript : MonoBehaviour
 {
+    public GameObject Coin;
+    public GameObject[] Materials;
     First Damage;
     public GameObject Bullet;
     public float HP = 12;
@@ -60,6 +62,18 @@ public class GromBirdScript : MonoBehaviour
             }
             else
             {
+                int RandomVar;
+                RandomVar = Random.Range(30, 35);
+                for (int i = 0; i < RandomVar; i += 1)
+                {
+                    Instantiate(Coin, transform.position, Quaternion.identity);
+                }
+                int RandomVar2;
+                RandomVar2 = Random.Range(2,7);
+                for (int i = 0; i < RandomVar2; i += 1)
+                {
+                    Instantiate(Materials[Random.Range(0, 3)], transform.position, Quaternion.identity);
+                }
                 Destroy(gameObject);
             }
         }
